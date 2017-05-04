@@ -1,3 +1,6 @@
+@import "_variables";
+@import "_fonts";
+
 html, body{
   height: 100%;
   width: 100%;
@@ -6,7 +9,39 @@ html, body{
 body{
   padding: 0;
   margin: 0;
+  font-family: 'avenirRegular', Arial;
 }
+
+h1{
+  font-family: 'avenirHeavy';
+  font-size: 65px;
+  margin: 0;
+}
+
+h2{
+  text-transform: uppercase;
+  font-family: 'avenirBold';
+  font-size: 30px;
+}
+
+h3{
+  font-family: 'avenirBold';
+  font-size: 23px;
+}
+
+p{
+  font-family: 'avenirRegular';
+  font-size: 21px;
+  color: $font-dark-muted;
+}
+
+a{
+  color: $font-pink;
+  font-family: 'avenirBold';
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 
 .page{
   position: relative;
@@ -21,9 +56,8 @@ body{
 }
 
 .central-panel{
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
-  border: 1px solid #ccc;
 }
 
 .burger-wrapper{
@@ -42,7 +76,7 @@ body{
     display: block;
   }
   span{
-    background: #333;
+    background: $transparent-black;
     display: block;
     width: 25px;
     height: 3px;
@@ -69,10 +103,143 @@ body{
   }
 }
 
+header{
+  background-color: $dark-bg;
+}
+
 .rebus-button{
   padding: 40px;
 }
 
 .header-title-wrapper{
+  padding-bottom: 25px;
   width: 60%;
+  .header-title{
+    color: white;
+    text-shadow: 0px 4px 0px rgba(20, 20, 20, 1);
+  }
+  .header-subtitle{
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0px 4px 0px rgba(20, 20, 20, 1);
+  }
+  .frontend-brand{
+    color: $font-pink;
+    font-family: 'avenirBold';
+  }
+}
+
+.projects{
+  padding: 30px 0;
+  &.projects-right{
+    .info-wrapper{
+      text-align: end;
+    }
+  }
+  .project-thumbnail{
+    height: 100px;
+    width: 40%;
+    background-color: #ccc;
+    height: 200px;
+  }
+  .project-info{
+    width: 35%;
+    padding: 0 15px;
+    .info-wrapper{
+      max-width: 300px;
+    }
+    h3{
+      color: $font-dark;
+    }
+    a{
+      text-decoration: underline;
+    }
+  }
+  &.projects-left{
+    >div{
+      float: left;
+    }
+  }
+  &.projects-right{
+    >div{
+      float: right;
+    }
+  }
+  &:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.buttons{
+  width: 205px;
+  margin: 30px auto;
+  display: block;
+  border: 2px solid $font-pink;
+  padding: 15px 20px 10px 20px;
+  border-radius: 2px;
+  a{
+    text-decoration: none;
+  }
+}
+
+.sections-title{
+  padding: 25px 0;
+  .content{
+    width: 185px;
+    margin: 30px auto;
+  }
+  .left-span{
+    display: inline-block;
+  }
+  .right-span{
+    border-left: 2px solid $transparent-black;
+    padding: 20px 6px 0 6px;
+    float: right;
+    display: inline-block;
+  }
+}
+
+.about-section{
+  .subparagraph{
+    font-size: 16px;
+    margin: 40px 0px;
+  }
+}
+
+.awords-section{
+  .awords-wrapper{
+    float: right;
+    text-align: center;
+    width: 45%;
+  }
+  p{
+    text-align: left;
+    margin: 35px 0;
+  }
+  &:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.experience-section{
+  .content{
+    width: 345px;
+  }
+  background-color: $dark-bg;
+  color: white;
+  .right-span{
+    border-left-color: white;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .central-panel {
+    width: 90%;
+  }
 }

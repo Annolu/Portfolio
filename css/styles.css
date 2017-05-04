@@ -1,10 +1,45 @@
+@font-face {
+  font-family: 'avenirRegular';
+  src: url("../fonts/AvenirNextLTPro-Regular.otf"); }
+@font-face {
+  font-family: 'avenirBold';
+  src: url("../fonts/AvenirNextLTPro-Bold.otf"); }
+@font-face {
+  font-family: 'avenirHeavy';
+  src: url("../fonts/AvenirNextLTPro-Heavy.otf"); }
 html, body {
   height: 100%;
   width: 100%; }
 
 body {
   padding: 0;
+  margin: 0;
+  font-family: 'avenirRegular', Arial; }
+
+h1 {
+  font-family: 'avenirHeavy';
+  font-size: 65px;
   margin: 0; }
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'avenirBold';
+  font-size: 30px; }
+
+h3 {
+  font-family: 'avenirBold';
+  font-size: 23px; }
+
+p {
+  font-family: 'avenirRegular';
+  font-size: 21px;
+  color: #aaa; }
+
+a {
+  color: #f56aa1;
+  font-family: 'avenirBold';
+  text-transform: uppercase;
+  font-size: 20px; }
 
 .page {
   position: relative;
@@ -18,9 +53,8 @@ body {
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1); }
 
 .central-panel {
-  width: 80%;
-  margin: 0 auto;
-  border: 1px solid #ccc; }
+  width: 70%;
+  margin: 0 auto; }
 
 .burger-wrapper {
   width: 100%;
@@ -36,7 +70,7 @@ body {
     cursor: pointer;
     display: block; }
   .burger-container span {
-    background: #333;
+    background: rgba(0, 0, 0, 0.4);
     display: block;
     width: 25px;
     height: 3px;
@@ -54,10 +88,104 @@ body {
     transform: rotate(45deg);
     top: -7px; }
 
+header {
+  background-color: #443b8c; }
+
 .rebus-button {
   padding: 40px; }
 
 .header-title-wrapper {
+  padding-bottom: 25px;
   width: 60%; }
+  .header-title-wrapper .header-title {
+    color: white;
+    text-shadow: 0px 4px 0px #141414; }
+  .header-title-wrapper .header-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0px 4px 0px #141414; }
+  .header-title-wrapper .frontend-brand {
+    color: #f56aa1;
+    font-family: 'avenirBold'; }
+
+.projects {
+  padding: 30px 0; }
+  .projects.projects-right .info-wrapper {
+    text-align: end; }
+  .projects .project-thumbnail {
+    height: 100px;
+    width: 40%;
+    background-color: #ccc;
+    height: 200px; }
+  .projects .project-info {
+    width: 35%;
+    padding: 0 15px; }
+    .projects .project-info .info-wrapper {
+      max-width: 300px; }
+    .projects .project-info h3 {
+      color: #111; }
+    .projects .project-info a {
+      text-decoration: underline; }
+  .projects.projects-left > div {
+    float: left; }
+  .projects.projects-right > div {
+    float: right; }
+  .projects:after {
+    content: '';
+    clear: both;
+    display: table; }
+
+.buttons {
+  width: 205px;
+  margin: 30px auto;
+  display: block;
+  border: 2px solid #f56aa1;
+  padding: 15px 20px 10px 20px;
+  border-radius: 2px; }
+  .buttons a {
+    text-decoration: none; }
+
+.sections-title {
+  padding: 25px 0; }
+  .sections-title .content {
+    width: 185px;
+    margin: 30px auto; }
+  .sections-title .left-span {
+    display: inline-block; }
+  .sections-title .right-span {
+    border-left: 2px solid rgba(0, 0, 0, 0.4);
+    padding: 20px 6px 0 6px;
+    float: right;
+    display: inline-block; }
+
+.about-section .subparagraph {
+  font-size: 16px;
+  margin: 40px 0px; }
+
+.awords-section .awords-wrapper {
+  float: right;
+  text-align: center;
+  width: 45%; }
+.awords-section p {
+  text-align: left;
+  margin: 35px 0; }
+.awords-section:after {
+  content: '';
+  clear: both;
+  display: table; }
+
+.experience-section {
+  background-color: #443b8c;
+  color: white; }
+  .experience-section .content {
+    width: 345px; }
+  .experience-section .right-span {
+    border-left-color: white; }
+
+@media only screen and (max-width: 880px) {
+  .central-panel {
+    width: 90%; } }
 
 /*# sourceMappingURL=styles.css.map */
