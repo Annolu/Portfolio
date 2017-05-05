@@ -64,9 +64,9 @@ a{
 }
 
 .page-content{
-  transition: all 200ms linear;
+  transition: all 200ms ease-out;
   &.scale-content{
-    transform: scaleX(0.9) scaleY(.97);
+    transform: scaleX(0.94) scaleY(0.98);
   }
 }
 
@@ -124,7 +124,6 @@ a{
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  transition: all 200ms linear;
   z-index: 2;
   &.open{
     background-color: rgba(0,0,0,.8);
@@ -133,6 +132,7 @@ a{
     .menu-item{
       transform: rotateX(0deg);
     }
+
   }
   .menu-item-wrapper{
     padding-top: 170px;
@@ -142,12 +142,17 @@ a{
     text-align: center;
     margin: 10px 0;
     padding: 20px 0 15px;
-    transition: all 200ms ease;
     transform: rotateX(90deg);
+    @for $i from 1 through 4{
+      &.item-#{$i}{
+        transition: all 200ms linear;
+        transition-delay: $i * 100ms;
+      }
+    }
     a{
       text-decoration: none;
       color: white;
-      text-shadow: $text-shadow;      
+      text-shadow: $text-shadow;
     }
   }
 }
