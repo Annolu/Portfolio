@@ -41,6 +41,9 @@ a {
   text-transform: uppercase;
   font-size: 20px; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .page {
   position: relative;
   z-index: 5;
@@ -56,9 +59,15 @@ a {
   width: 70%;
   margin: 0 auto; }
 
+.page-content {
+  transition: all 200ms linear; }
+  .page-content.scale-content {
+    transform: scaleX(0.9) scaleY(0.97); }
+
 .burger-wrapper {
   width: 100%;
-  position: fixed; }
+  position: fixed;
+  z-index: 3; }
 
 .burger-container {
   position: absolute;
@@ -70,29 +79,63 @@ a {
     cursor: pointer;
     display: block; }
   .burger-container span {
+    transform-origin: center center;
     background: rgba(0, 0, 0, 0.4);
     display: block;
     width: 25px;
     height: 3px;
-    margin-bottom: 7px;
+    margin: 0 auto 7px;
     position: relative;
-    top: 0;
-    transition: all 200ms linear; }
+    top: 0; }
+    .burger-container span:nth-child(2) {
+      width: 32px; }
   .burger-container.open span:nth-child(1) {
     transform: rotate(-45deg);
-    top: 15px; }
+    top: 9px; }
   .burger-container.open span:nth-child(2) {
     width: 0;
     opacity: 0; }
   .burger-container.open span:nth-child(3) {
     transform: rotate(45deg);
-    top: -7px; }
+    top: -11px; }
+
+.menu-overlayer {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  transition: all 200ms linear;
+  z-index: 2; }
+  .menu-overlayer.open {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    visibility: visible; }
+    .menu-overlayer.open .menu-item {
+      transform: rotateX(0deg); }
+  .menu-overlayer .menu-item-wrapper {
+    padding-top: 170px; }
+  .menu-overlayer .menu-item {
+    background-color: #443b8c;
+    text-align: center;
+    margin: 10px 0;
+    padding: 20px 0 15px;
+    transition: all 200ms ease;
+    transform: rotateX(90deg); }
+    .menu-overlayer .menu-item a {
+      text-decoration: none;
+      color: white;
+      text-shadow: 0px 4px 0px #141414; }
 
 header {
   background-color: #443b8c; }
 
 .rebus-button {
   padding: 40px; }
+
+.frontend-brand {
+  color: #f56aa1;
+  font-family: 'avenirBold'; }
 
 .header-title-wrapper {
   padding-bottom: 25px;
@@ -106,9 +149,6 @@ header {
     font-size: 28px;
     color: white;
     text-shadow: 0px 4px 0px #141414; }
-  .header-title-wrapper .frontend-brand {
-    color: #f56aa1;
-    font-family: 'avenirBold'; }
 
 .projects {
   padding: 30px 0; }
@@ -159,30 +199,80 @@ header {
     padding: 20px 6px 0 6px;
     float: right;
     display: inline-block; }
+  .sections-title .pre-title:after {
+    content: '';
+    clear: both;
+    display: table; }
 
-.about-section .subparagraph {
-  font-size: 16px;
-  margin: 40px 0px; }
+.about-section {
+  padding-bottom: 50px; }
+  .about-section .subparagraph {
+    font-size: 16px;
+    margin: 40px 0px; }
 
-.awords-section .awords-wrapper {
-  float: right;
-  text-align: center;
-  width: 45%; }
-.awords-section p {
-  text-align: left;
-  margin: 35px 0; }
-.awords-section:after {
-  content: '';
-  clear: both;
-  display: table; }
+.awards-section {
+  padding-bottom: 50px; }
+  .awards-section .awards-wrapper {
+    float: right;
+    text-align: center;
+    width: 45%; }
+  .awards-section p {
+    text-align: left;
+    margin: 35px 0; }
+  .awards-section:after {
+    content: '';
+    clear: both;
+    display: table; }
 
 .experience-section {
+  padding-bottom: 50px;
   background-color: #443b8c;
   color: white; }
-  .experience-section .content {
+  .experience-section .sections-title .content {
     width: 345px; }
   .experience-section .right-span {
     border-left-color: white; }
+  .experience-section .awards > div {
+    width: 49%;
+    display: inline-block; }
+  .experience-section .awards .awards-dates {
+    text-align: right;
+    vertical-align: top; }
+    .experience-section .awards .awards-dates p {
+      color: white;
+      padding-right: 70px;
+      font-size: 33px;
+      font-family: 'avenirBold'; }
+  .experience-section .awards .awards-details {
+    text-align: left; }
+    .experience-section .awards .awards-details .awards-headers {
+      color: white;
+      font-size: 26px; }
+
+.contact-section {
+  padding-bottom: 50px; }
+  .contact-section .content {
+    width: 275px;
+    white-space: nowrap; }
+  .contact-section .social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin: 0; }
+    .contact-section .social-media ul li {
+      display: inline-block;
+      width: 7%;
+      padding: 0 10px; }
+    .contact-section .social-media ul img {
+      width: 100%;
+      fill: #007AB9; }
+    .contact-section .social-media ul circle {
+      fill: #007AB9; }
+
+footer {
+  text-align: center; }
+  footer p {
+    margin: 35px 0; }
 
 @media only screen and (max-width: 880px) {
   .central-panel {
