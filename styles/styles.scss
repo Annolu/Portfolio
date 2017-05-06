@@ -16,6 +16,7 @@ h1{
   font-family: 'avenirHeavy';
   font-size: 65px;
   margin: 0;
+  text-transform: capitalize;
 }
 
 h2{
@@ -102,6 +103,7 @@ a{
   }
   &.open{
     span{
+      background-color: white;
       &:nth-child(1){
         transform: rotate(-45deg);
         top: 9px;
@@ -125,15 +127,7 @@ a{
   visibility: hidden;
   position: fixed;
   z-index: 2;
-  &.open{
-    background-color: rgba(0,0,0,.8);
-    opacity: 1;
-    visibility: visible;
-    .menu-item{
-      transform: rotateX(0deg);
-    }
-
-  }
+  transition: all 200ms ease;
   .menu-item-wrapper{
     padding-top: 170px;
   }
@@ -153,6 +147,14 @@ a{
       text-decoration: none;
       color: white;
       text-shadow: $text-shadow;
+    }
+  }
+  &.open{
+    background-color: rgba(0,0,0,.8);
+    opacity: 1;
+    visibility: visible;
+    .menu-item{
+      transform: rotateX(0deg);
     }
   }
 }
@@ -236,8 +238,11 @@ header{
   border: 2px solid $font-pink;
   padding: 15px 20px 10px 20px;
   border-radius: 2px;
-  a{
-    text-decoration: none;
+  transition: all 200ms ease;
+  text-decoration: none;
+  &:hover{
+    background-color: $font-pink;
+    color: white;
   }
 }
 
@@ -252,7 +257,7 @@ header{
   }
   .right-span{
     border-left: 2px solid $transparent-black;
-    padding: 20px 6px 0 6px;
+    padding: 25px 6px 0 6px;
     float: right;
     display: inline-block;
   }
@@ -295,6 +300,9 @@ header{
   padding-bottom: 50px;
   background-color: $dark-bg;
   color: white;
+  h1{
+    text-shadow: $text-shadow;
+  }
   .sections-title{
     .content{
       width: 345px;
@@ -313,9 +321,10 @@ header{
       vertical-align: top;
       p{
         color: white;
-        padding-right: 70px;
         font-size: 33px;
         font-family: 'avenirBold';
+        margin-right: 70px;
+        margin-top: 60px;
       }
     }
     .awards-details{
@@ -345,13 +354,51 @@ header{
         width: 7%;
         padding: 0 10px;
       }
-      img{
-        width: 100%;
-        fill:#007AB9;
-
+      .social-icons{
+        width: 65px;
+        height: 65px;
+        display: block;
+        transition: all 400ms ease;
+        background-size: contain;
       }
-      circle{
-        fill:#007AB9
+      .twitter{
+        background-image: url('../social-icons/twitter-grey.svg');
+        &:hover{
+          transform: rotate(360deg);
+          background-image: url('../social-icons/twitter.svg');
+        }
+      }
+      .github{
+        background-image: url('../social-icons/github-grey.svg');
+        &:hover{
+          background-image: url('../social-icons/github.svg');
+          transform: rotate(360deg);
+
+        }
+      }
+      .linkedin{
+        background-image: url('../social-icons/linkedin-grey.svg');
+        &:hover{
+          background-image: url('../social-icons/linkedin.svg');
+          transform: rotate(360deg);
+
+        }
+      }
+      .soundcloud{
+        background-image: url('../social-icons/soundcloud-grey.svg');
+        &:hover{
+          background-image: url('../social-icons/soundcloud.svg');
+          transform: rotate(360deg);
+
+        }
+      }
+      .email{
+        background-image: url('../social-icons/email-grey.svg');
+        &:hover{
+          background-image: url('../social-icons/email.svg');
+          transform: rotate(360deg);
+
+        }
       }
     }
   }

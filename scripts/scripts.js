@@ -1,29 +1,44 @@
 var burger= document.getElementById('burgerContainer');
-var menuOverlayer= document.getElementById('menuOverlayer');
-var pageContent= document.getElementById('pageContent');
-var body= document.getElementsByTagName('body')[0];
 
+burger.addEventListener('click', openMenu);
 
-burger.addEventListener('click', animateBurger);
+function openMenu() {
+  animateBurger();
+  showOverlayer();
+  bodyNoScroll();
+  scaleBody();
+}
 
-function animateBurger() {
-  if(this.classList.contains('open')){
-    this.classList.remove('open');
+function animateBurger(){
+  if(burger.classList.contains('open')){
+    burger.classList.remove('open');
   }else{
-    this.classList.add('open');
+    burger.classList.add('open');
   }
+}
+
+function showOverlayer() {
+  let menuOverlayer= document.getElementById('menuOverlayer');
 
   if(menuOverlayer.classList.contains('open')){
     menuOverlayer.classList.remove('open');
   }else{
     menuOverlayer.classList.add('open');
   }
+}
+
+function bodyNoScroll() {
+  let body= document.getElementsByTagName('body')[0];
 
   if(body.classList.contains('no-scroll')){
     body.classList.remove('no-scroll');
   }else{
     body.classList.add('no-scroll');
   }
+}
+
+function scaleBody() {
+  let pageContent= document.getElementById('pageContent');
 
   if(pageContent.classList.contains('scale-content')){
     pageContent.classList.remove('scale-content');

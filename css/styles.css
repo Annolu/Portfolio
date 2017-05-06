@@ -19,7 +19,8 @@ body {
 h1 {
   font-family: 'avenirHeavy';
   font-size: 65px;
-  margin: 0; }
+  margin: 0;
+  text-transform: capitalize; }
 
 h2 {
   text-transform: uppercase;
@@ -89,15 +90,17 @@ a {
     top: 0; }
     .burger-container span:nth-child(2) {
       width: 32px; }
-  .burger-container.open span:nth-child(1) {
-    transform: rotate(-45deg);
-    top: 9px; }
-  .burger-container.open span:nth-child(2) {
-    width: 0;
-    opacity: 0; }
-  .burger-container.open span:nth-child(3) {
-    transform: rotate(45deg);
-    top: -11px; }
+  .burger-container.open span {
+    background-color: white; }
+    .burger-container.open span:nth-child(1) {
+      transform: rotate(-45deg);
+      top: 9px; }
+    .burger-container.open span:nth-child(2) {
+      width: 0;
+      opacity: 0; }
+    .burger-container.open span:nth-child(3) {
+      transform: rotate(45deg);
+      top: -11px; }
 
 .menu-overlayer {
   width: 100%;
@@ -105,13 +108,8 @@ a {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  z-index: 2; }
-  .menu-overlayer.open {
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 1;
-    visibility: visible; }
-    .menu-overlayer.open .menu-item {
-      transform: rotateX(0deg); }
+  z-index: 2;
+  transition: all 200ms ease; }
   .menu-overlayer .menu-item-wrapper {
     padding-top: 170px; }
   .menu-overlayer .menu-item {
@@ -136,6 +134,12 @@ a {
       text-decoration: none;
       color: white;
       text-shadow: 0px 4px 0px #141414; }
+  .menu-overlayer.open {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    visibility: visible; }
+    .menu-overlayer.open .menu-item {
+      transform: rotateX(0deg); }
 
 header {
   background-color: #443b8c; }
@@ -193,9 +197,12 @@ header {
   display: block;
   border: 2px solid #f56aa1;
   padding: 15px 20px 10px 20px;
-  border-radius: 2px; }
-  .buttons a {
-    text-decoration: none; }
+  border-radius: 2px;
+  transition: all 200ms ease;
+  text-decoration: none; }
+  .buttons:hover {
+    background-color: #f56aa1;
+    color: white; }
 
 .sections-title {
   padding: 25px 0; }
@@ -206,7 +213,7 @@ header {
     display: inline-block; }
   .sections-title .right-span {
     border-left: 2px solid rgba(0, 0, 0, 0.4);
-    padding: 20px 6px 0 6px;
+    padding: 25px 6px 0 6px;
     float: right;
     display: inline-block; }
   .sections-title .pre-title:after {
@@ -238,6 +245,8 @@ header {
   padding-bottom: 50px;
   background-color: #443b8c;
   color: white; }
+  .experience-section h1 {
+    text-shadow: 0px 4px 0px #141414; }
   .experience-section .sections-title .content {
     width: 345px; }
   .experience-section .right-span {
@@ -250,9 +259,10 @@ header {
     vertical-align: top; }
     .experience-section .awards .awards-dates p {
       color: white;
-      padding-right: 70px;
       font-size: 33px;
-      font-family: 'avenirBold'; }
+      font-family: 'avenirBold';
+      margin-right: 70px;
+      margin-top: 60px; }
   .experience-section .awards .awards-details {
     text-align: left; }
     .experience-section .awards .awards-details .awards-headers {
@@ -273,11 +283,37 @@ header {
       display: inline-block;
       width: 7%;
       padding: 0 10px; }
-    .contact-section .social-media ul img {
-      width: 100%;
-      fill: #007AB9; }
-    .contact-section .social-media ul circle {
-      fill: #007AB9; }
+    .contact-section .social-media ul .social-icons {
+      width: 65px;
+      height: 65px;
+      display: block;
+      transition: all 400ms ease;
+      background-size: contain; }
+    .contact-section .social-media ul .twitter {
+      background-image: url("../social-icons/twitter-grey.svg"); }
+      .contact-section .social-media ul .twitter:hover {
+        transform: rotate(360deg);
+        background-image: url("../social-icons/twitter.svg"); }
+    .contact-section .social-media ul .github {
+      background-image: url("../social-icons/github-grey.svg"); }
+      .contact-section .social-media ul .github:hover {
+        background-image: url("../social-icons/github.svg");
+        transform: rotate(360deg); }
+    .contact-section .social-media ul .linkedin {
+      background-image: url("../social-icons/linkedin-grey.svg"); }
+      .contact-section .social-media ul .linkedin:hover {
+        background-image: url("../social-icons/linkedin.svg");
+        transform: rotate(360deg); }
+    .contact-section .social-media ul .soundcloud {
+      background-image: url("../social-icons/soundcloud-grey.svg"); }
+      .contact-section .social-media ul .soundcloud:hover {
+        background-image: url("../social-icons/soundcloud.svg");
+        transform: rotate(360deg); }
+    .contact-section .social-media ul .email {
+      background-image: url("../social-icons/email-grey.svg"); }
+      .contact-section .social-media ul .email:hover {
+        background-image: url("../social-icons/email.svg");
+        transform: rotate(360deg); }
 
 footer {
   text-align: center; }
