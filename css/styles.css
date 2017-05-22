@@ -61,9 +61,8 @@ a {
   margin: 0 auto; }
 
 .page-content {
-  transition: all 200ms ease-out; }
-  .page-content.scale-content {
-    transform: scaleX(0.94) scaleY(0.98); }
+  transition: all 200ms ease-out;
+  background-color: white; }
 
 .burger-wrapper {
   width: 100%;
@@ -144,15 +143,12 @@ a {
 header {
   background-color: #443b8c; }
 
-.rebus-button {
-  padding: 40px; }
-
 .frontend-brand {
   color: #f56aa1;
   font-family: 'avenirBold'; }
 
 .header-title-wrapper {
-  padding-bottom: 25px;
+  padding: 80px 0px 10px 0;
   width: 60%; }
   .header-title-wrapper .header-title {
     color: white;
@@ -174,10 +170,8 @@ header {
     background-color: #ccc;
     height: 200px; }
   .projects .project-info {
-    width: 35%;
+    width: 45%;
     padding: 0 15px; }
-    .projects .project-info .info-wrapper {
-      max-width: 300px; }
     .projects .project-info h3 {
       color: #111; }
     .projects .project-info a {
@@ -213,7 +207,7 @@ header {
     display: inline-block; }
   .sections-title .right-span {
     border-left: 2px solid rgba(0, 0, 0, 0.4);
-    padding: 25px 6px 0 6px;
+    padding: 15px 6px 10px 6px;
     float: right;
     display: inline-block; }
   .sections-title .pre-title:after {
@@ -229,6 +223,11 @@ header {
 
 .awards-section {
   padding-bottom: 50px; }
+  .awards-section .skills-chart {
+    display: inline-block;
+    height: 400px;
+    width: 50%;
+    background-color: #ccc; }
   .awards-section .awards-wrapper {
     float: right;
     text-align: center;
@@ -264,7 +263,8 @@ header {
       margin-right: 70px;
       margin-top: 60px; }
   .experience-section .awards .awards-details {
-    text-align: left; }
+    text-align: left;
+    max-width: 400px; }
     .experience-section .awards .awards-details .awards-headers {
       color: white;
       font-size: 26px; }
@@ -279,49 +279,70 @@ header {
     padding-left: 0;
     text-align: center;
     margin: 0; }
-    .contact-section .social-media ul li {
-      display: inline-block;
-      width: 7%;
-      padding: 0 10px; }
-    .contact-section .social-media ul .social-icons {
-      width: 65px;
-      height: 65px;
-      display: block;
-      transition: all 400ms ease;
-      background-size: contain; }
-    .contact-section .social-media ul .twitter {
-      background-image: url("../social-icons/twitter-grey.svg"); }
-      .contact-section .social-media ul .twitter:hover {
-        transform: rotate(360deg);
-        background-image: url("../social-icons/twitter.svg"); }
-    .contact-section .social-media ul .github {
-      background-image: url("../social-icons/github-grey.svg"); }
-      .contact-section .social-media ul .github:hover {
-        background-image: url("../social-icons/github.svg");
-        transform: rotate(360deg); }
-    .contact-section .social-media ul .linkedin {
-      background-image: url("../social-icons/linkedin-grey.svg"); }
-      .contact-section .social-media ul .linkedin:hover {
-        background-image: url("../social-icons/linkedin.svg");
-        transform: rotate(360deg); }
-    .contact-section .social-media ul .soundcloud {
-      background-image: url("../social-icons/soundcloud-grey.svg"); }
-      .contact-section .social-media ul .soundcloud:hover {
-        background-image: url("../social-icons/soundcloud.svg");
-        transform: rotate(360deg); }
-    .contact-section .social-media ul .email {
-      background-image: url("../social-icons/email-grey.svg"); }
-      .contact-section .social-media ul .email:hover {
-        background-image: url("../social-icons/email.svg");
-        transform: rotate(360deg); }
+  .contact-section .social-media li {
+    display: inline-block;
+    padding: 0 10px; }
+  .contact-section .social-media .social-icons {
+    width: 65px;
+    height: 65px;
+    display: block;
+    transition: all 400ms ease;
+    background-size: contain; }
+  .contact-section .social-media .twitter {
+    background-image: url("../social-icons/twitter-grey.svg"); }
+    .contact-section .social-media .twitter:hover {
+      transform: rotate(360deg);
+      background-image: url("../social-icons/twitter.svg"); }
+  .contact-section .social-media .github {
+    background-image: url("../social-icons/github-grey.svg"); }
+    .contact-section .social-media .github:hover {
+      background-image: url("../social-icons/github.svg");
+      transform: rotate(360deg); }
+  .contact-section .social-media .linkedin {
+    background-image: url("../social-icons/linkedin-grey.svg"); }
+    .contact-section .social-media .linkedin:hover {
+      background-image: url("../social-icons/linkedin.svg");
+      transform: rotate(360deg); }
+  .contact-section .social-media .soundcloud {
+    background-image: url("../social-icons/soundcloud-grey.svg"); }
+    .contact-section .social-media .soundcloud:hover {
+      background-image: url("../social-icons/soundcloud.svg");
+      transform: rotate(360deg); }
+  .contact-section .social-media .email {
+    background-image: url("../social-icons/email-grey.svg"); }
+    .contact-section .social-media .email:hover {
+      background-image: url("../social-icons/email.svg");
+      transform: rotate(360deg); }
 
 footer {
   text-align: center; }
   footer p {
-    margin: 35px 0; }
+    padding: 25px 0;
+    margin: 0; }
 
 @media only screen and (max-width: 880px) {
   .central-panel {
     width: 90%; } }
+@media only screen and (max-width: 580px) {
+  .awards-section .sections {
+    width: 100%;
+    float: none; }
+  .awards-section p {
+    text-align: center; }
+
+  .frontend-brand {
+    font-size: 15px; }
+
+  .projects .project-thumbnail {
+    width: 100%; }
+  .projects .project-info {
+    width: 100%;
+    padding: 0; }
+
+  .contact-section .social-media li {
+    padding: 0px 3px; }
+  .contact-section .social-media .social-icons {
+    width: 45px;
+    height: 45px; } }
 
 /*# sourceMappingURL=styles.css.map */

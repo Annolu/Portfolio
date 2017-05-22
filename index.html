@@ -1,231 +1,525 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
-<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Rebus.io</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Blueprint: A basic template for a page stack navigation effect" />
+	<meta name="keywords" content="blueprint, template, html, css, page stack, 3d, perspective, navigation, menu" />
+	<title>Rebus.io</title>
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
   <link rel="stylesheet" href="css/styles.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+	<script src="scripts/modernizr-custom.js"></script>
 </head>
+
 <body>
-  <div class="page" id="page-training">
-    <div class="menu-overlayer" id="menuOverlayer">
-      <div class="menu-item-wrapper">
-        <div class="menu-item item-1">
-          <a href="#">work</a>
-        </div>
-        <div class="menu-item item-2">
-          <a href="#">about</a>
-        </div>
-        <div class="menu-item item-3">
-          <a href="#">experience</a>
-        </div>
-        <div class="menu-item item-4">
-          <a href="#">contact</a>
+	<!-- navigation -->
+	<nav class="pages-nav">
+		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Rebus.io</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-custom">Augusto Solorzano</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-training">Noemi Andreoli</a></div>
+
+	</nav>
+	<!-- /navigation-->
+	<!-- pages stack -->
+	<div class="pages-stack">
+		<!-- page -->
+		<div class="page" id="page-home">
+      <!-- <div class="rebus-button">
+        <span><a href="#">rebus</a></span>
+      </div> -->
+			<!-- Blueprint header -->
+			<header class="bp-header cf">
+				<span class="bp-header__present">Blueprint <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<h1 class="bp-header__title">Rebus.io</h1>
+				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
+				<!-- <nav class="bp-nav">
+					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="Blueprints archive"><span>Go to the archive</span></a>
+				</nav> -->
+			</header>
+			<!-- <img class="poster" src="images/1.jpg" alt="img01" />-->
+      <div class="menu-overlayer" id="menuOverlayer">
+        <div class="menu-item-wrapper">
+          <div class="menu-item item-1">
+            <a href="#">work</a>
+          </div>
+          <div class="menu-item item-2">
+            <a href="#">about</a>
+          </div>
+          <div class="menu-item item-3">
+            <a href="#">experience</a>
+          </div>
+          <div class="menu-item item-4">
+            <a href="#">contact</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="burger-wrapper">
-        <div id="burgerContainer" class="burger-container">
-            <div id="burger" class="burger">
-                <a>
-                   <span>&nbsp;</span>
-                   <span>&nbsp;</span>
-                   <span>&nbsp;</span>
-                </a>
+      <div class="burger-wrapper">
+          <div id="burgerContainer" class="burger-container">
+              <div id="burger" class="burger">
+                  <a>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+		</div>
+		<!-- /page -->
+
+		<div class="page" id="page-software"><!--
+			<header class="bp-header cf">
+				<h1 class="bp-header__title">invisible yo</h1>
+				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
+				<p class="info">
+					"I decided to pick the diet that I thought would maximize my chances of long-term survival." &mdash; Al Gore
+				</p>
+			</header>
+			<img class="poster" src="images/3.jpg" alt="img03" />-->
+		</div>
+		<div class="page" id="page-custom">
+			<div class="menu-overlayer" id="menuOverlayer">
+        <div class="menu-item-wrapper">
+          <div class="menu-item item-1">
+            <a href="#">work</a>
+          </div>
+          <div class="menu-item item-2">
+            <a href="#">about</a>
+          </div>
+          <div class="menu-item item-3">
+            <a href="#">experience</a>
+          </div>
+          <div class="menu-item item-4">
+            <a href="#">contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="burger-wrapper">
+          <div id="burgerContainer" class="burger-container">
+              <div id="burger" class="burger">
+                  <a>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="page-content" id="pageContent">
+        <header>
+          <div class="central-panel">
+            <div class="header-title-wrapper">
+              <h1 class="header-title">augusto</h1>
+              <p class="header-subtitle">Solorzano</p>
+              <p class="frontend-brand">Front End Developer/UX Designer</p>
             </div>
+          </div>
+        </header>
+        <div class="work-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">recent projects</span>
+                  </div>
+                  <h1>work</h1>
+                </div>
+            </div>
+            <div class="projects projects-left">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+            <div class="projects projects-right">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+            <div class="projects projects-left">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+            <div class="projects projects-right">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="page-content" id="pageContent">
-      <header>
-        <div class="rebus-button">
-          <span>rebus</span>
+        <div>
+          <div class="central-panel">
+            <a  class="buttons" href="#">Load more works</a>
+          </div>
         </div>
-        <div class="central-panel">
-          <div class="header-title-wrapper">
-            <h1 class="header-title">augusto</h1>
-            <p class="header-subtitle">Solorzano</p>
+        <div class="about-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">who am I</span>
+                  </div>
+                  <h1>about</h1>
+                </div>
+            </div>
+            <div class="content">
+              <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+              <p class="subparagraph">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="awards-section">
+          <div class="central-panel">
+            <div class="sections skills-chart">
+
+            </div>
+            <div class="sections awards-wrapper">
+              <h2 class="title">awards</h2>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+            </div>
+          </div>
+        </div>
+        <div class="experience-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">education and</span>
+                  </div>
+                  <h1>experience</h1>
+                </div>
+            </div>
+            <div class="content">
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">contact</span>
+                  </div>
+                  <h1>say hello</h1>
+                </div>
+            </div>
+            <div class="social-media" id="socialMedia">
+              <ul>
+                <li><a href="#"><span class="twitter social-icons"></span></a></li>
+                <li><a href="#"><span class="github social-icons"></span></a></li>
+                <li><a href="#"><span class="linkedin social-icons"></span></a></li>
+                <li><a href="#"><span class="soundcloud social-icons"></span></a></li>
+                <li><a href="#"><span class="email social-icons"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="central-panel">
             <p class="frontend-brand">Front End Developer/UX Designer</p>
           </div>
+        </footer>
+      </div>
+		</div>
+		<div class="page" id="page-training">
+      <div class="menu-overlayer" id="menuOverlayer">
+        <div class="menu-item-wrapper">
+          <div class="menu-item item-1">
+            <a href="#">work</a>
+          </div>
+          <div class="menu-item item-2">
+            <a href="#">about</a>
+          </div>
+          <div class="menu-item item-3">
+            <a href="#">experience</a>
+          </div>
+          <div class="menu-item item-4">
+            <a href="#">contact</a>
+          </div>
         </div>
-      </header>
-      <div class="work-section">
-        <div class="central-panel">
-          <div class="sections-title">
-              <div class="content">
-                <div class="pre-title">
-                  <span class="left-span"></span>
-                  <span class="right-span">recent projects</span>
+      </div>
+      <div class="burger-wrapper">
+          <div id="burgerContainer" class="burger-container">
+              <div id="burger" class="burger">
+                  <a>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                     <span>&nbsp;</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="page-content" id="pageContent">
+        <header>
+          <div class="central-panel">
+            <div class="header-title-wrapper">
+              <h1 class="header-title">noemi</h1>
+              <p class="header-subtitle">Andreoli</p>
+              <p class="frontend-brand">Front End Developer/UX Designer</p>
+            </div>
+          </div>
+        </header>
+        <div class="work-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">recent projects</span>
+                  </div>
+                  <h1>work</h1>
                 </div>
-                <h1>work</h1>
+            </div>
+            <div class="projects projects-left">
+              <div class="project-thumbnail">
               </div>
-          </div>
-          <div class="projects projects-left">
-            <div class="project-thumbnail">
-            </div>
-            <div class="project-info">
-              <div class="info-wrapper">
-                <h3>Front End Developer / UX designer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
-                <a href="#">live project</a>
-              </div>
-            </div>
-          </div>
-          <div class="projects projects-right">
-            <div class="project-thumbnail">
-            </div>
-            <div class="project-info">
-              <div class="info-wrapper">
-                <h3>Front End Developer / UX designer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
-                <a href="#">live project</a>
-              </div>
-            </div>
-          </div>
-          <div class="projects projects-left">
-            <div class="project-thumbnail">
-            </div>
-            <div class="project-info">
-              <div class="info-wrapper">
-                <h3>Front End Developer / UX designer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
-                <a href="#">live project</a>
-              </div>
-            </div>
-          </div>
-          <div class="projects projects-right">
-            <div class="project-thumbnail">
-            </div>
-            <div class="project-info">
-              <div class="info-wrapper">
-                <h3>Front End Developer / UX designer</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
-                <a href="#">live project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="central-panel">
-          <a  class="buttons" href="#">Load more works</a>
-        </div>
-      </div>
-      <div class="about-section">
-        <div class="central-panel">
-          <div class="sections-title">
-              <div class="content">
-                <div class="pre-title">
-                  <span class="left-span"></span>
-                  <span class="right-span">who am I</span>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
                 </div>
-                <h1>about</h1>
               </div>
-          </div>
-          <div class="content">
-            <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-            <p class="subparagraph">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+            </div>
+            <div class="projects projects-right">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+            <div class="projects projects-left">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
+            <div class="projects projects-right">
+              <div class="project-thumbnail">
+              </div>
+              <div class="project-info">
+                <div class="info-wrapper">
+                  <h3>Front End Developer / UX designer</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>
+                  <a href="#">live project</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="awards-section">
-        <div class="central-panel">
-          <div class="sections skills-chart">
+        <div>
+          <div class="central-panel">
+            <a  class="buttons" href="#">Load more works</a>
+          </div>
+        </div>
+        <div class="about-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">who am I</span>
+                  </div>
+                  <h1>about</h1>
+                </div>
+            </div>
+            <div class="content">
+              <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+              <p class="subparagraph">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="awards-section">
+          <div class="central-panel">
+            <div class="sections skills-chart">
 
-          </div>
-          <div class="sections awards-wrapper">
-            <h2 class="title">awards</h2>
-            <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
-            <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
-            <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+            </div>
+            <div class="sections awards-wrapper">
+              <h2 class="title">awards</h2>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+              <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="experience-section">
-        <div class="central-panel">
-          <div class="sections-title">
-              <div class="content">
-                <div class="pre-title">
-                  <span class="left-span"></span>
-                  <span class="right-span">education and</span>
+        <div class="experience-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">education and</span>
+                  </div>
+                  <h1>experience</h1>
                 </div>
-                <h1>experience</h1>
-              </div>
-          </div>
-          <div class="content">
-            <div class="awards aword-one">
-              <div class="awards-dates">
-                <p>2012-2016</p>
-              </div>
-              <div class="awards-details">
-                <p class="awards-headers">Front End Developer/UX Designer</p>
-                <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-              </div>
             </div>
-            <div class="awards aword-one">
-              <div class="awards-dates">
-                <p>2012-2016</p>
-              </div>
-              <div class="awards-details">
-                <p class="awards-headers">Front End Developer/UX Designer</p>
-                <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-              </div>
-            </div>
-            <div class="awards aword-one">
-              <div class="awards-dates">
-                <p>2012-2016</p>
-              </div>
-              <div class="awards-details">
-                <p class="awards-headers">Front End Developer/UX Designer</p>
-                <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-              </div>
-            </div>
-            <div class="awards aword-one">
-              <div class="awards-dates">
-                <p>2012-2016</p>
-              </div>
-              <div class="awards-details">
-                <p class="awards-headers">Front End Developer/UX Designer</p>
-                <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-section">
-        <div class="central-panel">
-          <div class="sections-title">
-              <div class="content">
-                <div class="pre-title">
-                  <span class="left-span"></span>
-                  <span class="right-span">contact</span>
+            <div class="content">
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
                 </div>
-                <h1>say hello</h1>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
               </div>
-          </div>
-          <div class="social-media" id="socialMedia">
-            <ul>
-              <li><a href="#"><span class="twitter social-icons"></span></a></li>
-              <li><a href="#"><span class="github social-icons"></span></a></li>
-              <li><a href="#"><span class="linkedin social-icons"></span></a></li>
-              <li><a href="#"><span class="soundcloud social-icons"></span></a></li>
-              <li><a href="#"><span class="email social-icons"></span></a></li>
-            </ul>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+              <div class="awards aword-one">
+                <div class="awards-dates">
+                  <p>2012-2016</p>
+                </div>
+                <div class="awards-details">
+                  <p class="awards-headers">Front End Developer/UX Designer</p>
+                  <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="contact-section">
+          <div class="central-panel">
+            <div class="sections-title">
+                <div class="content">
+                  <div class="pre-title">
+                    <span class="left-span"></span>
+                    <span class="right-span">contact</span>
+                  </div>
+                  <h1>say hello</h1>
+                </div>
+            </div>
+            <div class="social-media" id="socialMedia">
+              <ul>
+                <li><a href="#"><span class="twitter social-icons"></span></a></li>
+                <li><a href="#"><span class="github social-icons"></span></a></li>
+                <li><a href="#"><span class="linkedin social-icons"></span></a></li>
+                <li><a href="#"><span class="soundcloud social-icons"></span></a></li>
+                <li><a href="#"><span class="email social-icons"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="central-panel">
+            <p class="frontend-brand">Front End Developer/UX Designer</p>
+          </div>
+        </footer>
       </div>
-      <footer>
-        <div class="central-panel">
-          <p class="frontend-brand">Front End Developer/UX Designer</p>
-        </div>
-      </footer>
-    </div>
-  </div>
+		</div>
+	</div>
+	<!-- /pages-stack -->
+	<button class="menu-button">
+    <a href="#">rebus</a>
+  </button>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="scripts/classie.js"></script>
+	<script src="scripts/main.js"></script>
   <script src="scripts/scripts.js"></script>
 </body>
+
 </html>

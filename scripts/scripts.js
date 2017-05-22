@@ -1,48 +1,32 @@
-var burger= document.getElementById('burgerContainer');
+$(document).ready(function() {
 
-burger.addEventListener('click', openMenu);
+  var burger= $('.burger-container');
 
-function openMenu() {
-  animateBurger();
-  showOverlayer();
-  bodyNoScroll();
-  scaleBody();
-}
+  burger.click(openMenu);
 
-function animateBurger(){
-  if(burger.classList.contains('open')){
-    burger.classList.remove('open');
-  }else{
-    burger.classList.add('open');
+  function openMenu() {
+    animateBurger();
+    showOverlayer();
+    bodyNoScroll();
+    scaleBody();
   }
-}
 
-function showOverlayer() {
-  let menuOverlayer= document.getElementById('menuOverlayer');
-
-  if(menuOverlayer.classList.contains('open')){
-    menuOverlayer.classList.remove('open');
-  }else{
-    menuOverlayer.classList.add('open');
+  function animateBurger(){
+    burger.toggleClass('open');
   }
-}
 
-function bodyNoScroll() {
-  let body= document.getElementsByTagName('body')[0];
-
-  if(body.classList.contains('no-scroll')){
-    body.classList.remove('no-scroll');
-  }else{
-    body.classList.add('no-scroll');
+  function showOverlayer() {
+    let menuOverlayer= $('.menu-overlayer');
+    menuOverlayer.toggleClass('open');
   }
-}
 
-function scaleBody() {
-  let pageContent= document.getElementById('pageContent');
-
-  if(pageContent.classList.contains('scale-content')){
-    pageContent.classList.remove('scale-content');
-  }else{
-    pageContent.classList.add('scale-content');
+  function bodyNoScroll() {
+    let body= $('body');
+    body.toggleClass('no-scoll')
   }
-}
+
+  function scaleBody() {
+    let pageContent= $('.page-content');
+    pageContent.toggleClass('scale-content');
+  }
+});
