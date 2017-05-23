@@ -70,7 +70,6 @@ a{
   &.scale-content{
     // transform: scaleX(0.94) scaleY(0.98);
     // filter: blur(3px);
-
   }
 }
 
@@ -101,7 +100,7 @@ a{
     top: 0;
     // transition: all 200ms linear;
     &:nth-child(2){
-      width: 32px;
+      width: 37px;
     }
   }
   &.open{
@@ -166,20 +165,6 @@ header{
   background-color: $dark-bg;
 }
 
-// .rebus-button{
-//   position: absolute;
-//   z-index: 1000;
-//   top: 30px;
-//   left: 30px;
-//   width: 30px;
-//   height: 24px;
-//   padding: 0;
-//   cursor: pointer;
-//   border: none;
-//   outline: none;
-//   background: transparent;
-// }
-
 .frontend-brand{
   color: $font-pink;
   font-family: 'avenirBold';
@@ -215,7 +200,7 @@ header{
     height: 200px;
   }
   .project-info{
-    width: 45%;
+    width: 55%;
     padding: 0 15px;
     .info-wrapper{
       // max-width: 300px;
@@ -245,9 +230,9 @@ header{
 }
 
 .buttons{
-  width: 205px;
+  // width: 205px;
   margin: 30px auto;
-  display: block;
+  display: inline-block;
   border: 2px solid $font-pink;
   padding: 15px 20px 10px 20px;
   border-radius: 2px;
@@ -259,11 +244,17 @@ header{
   }
 }
 
+.centre-button{
+  text-align: center;
+}
+
 .sections-title{
   padding: 25px 0;
+  text-align: center;
   .content{
-    width: 185px;
-    margin: 30px auto;
+    // width: 185px;
+    margin: 30px 0;
+    display: inline-block;
   }
   .left-span{
     display: inline-block;
@@ -273,6 +264,8 @@ header{
     padding: 15px 6px 10px 6px;
     float: right;
     display: inline-block;
+    min-width: 50%;
+    text-align: left;
   }
   .pre-title{
     &:after{
@@ -288,6 +281,9 @@ header{
   .subparagraph{
     font-size: 16px;
     margin: 40px 0px;
+  }
+  .content{
+    text-align: center;
   }
 }
 
@@ -322,11 +318,6 @@ header{
   h1{
     text-shadow: $text-shadow;
   }
-  .sections-title{
-    .content{
-      width: 345px;
-    }
-  }
   .right-span{
     border-left-color: white;
   }
@@ -335,24 +326,23 @@ header{
       width: 49%;
       display: inline-block;
     }
-    .awards-dates{
-      text-align: right;
-      vertical-align: top;
-      p{
-        color: white;
-        font-size: 33px;
-        font-family: 'avenirBold';
-        margin-right: 70px;
-        margin-top: 60px;
-      }
+  }
+  .awards-dates{
+    text-align: right;
+    vertical-align: top;
+    p{
+      color: white;
+      font-size: 33px;
+      font-family: 'avenirBold';
+      margin: 60px 70px 0 0;
     }
-    .awards-details{
-      text-align: left;
-      max-width: 400px;
-      .awards-headers{
-        color: white;
-        font-size: 26px;
-      }
+  }
+  .awards-details{
+    text-align: left;
+    max-width: 400px;
+    .awards-headers{
+      color: white;
+      font-size: 26px;
     }
   }
 }
@@ -360,7 +350,7 @@ header{
 .contact-section{
   padding-bottom: 50px;
   .content{
-    width: 275px;
+    // width: 275px;
     white-space: nowrap;
   }
   .social-media{
@@ -372,7 +362,6 @@ header{
     }
     li{
       display: inline-block;
-      // width: 7%;
       padding: 0 10px;
     }
     .social-icons{
@@ -385,40 +374,41 @@ header{
     .twitter{
       background-image: url('../social-icons/twitter-grey.svg');
       &:hover{
-        transform: rotate(360deg);
         background-image: url('../social-icons/twitter.svg');
+        transform: scale(1.2);
+        // transform: rotate(360deg);
       }
     }
     .github{
       background-image: url('../social-icons/github-grey.svg');
       &:hover{
         background-image: url('../social-icons/github.svg');
-        transform: rotate(360deg);
-
+        transform: scale(1.2);
+        // transform: rotate(360deg);
       }
     }
     .linkedin{
       background-image: url('../social-icons/linkedin-grey.svg');
       &:hover{
         background-image: url('../social-icons/linkedin.svg');
-        transform: rotate(360deg);
-
+        transform: scale(1.2);
+        // transform: rotate(360deg);
       }
     }
     .soundcloud{
       background-image: url('../social-icons/soundcloud-grey.svg');
       &:hover{
         background-image: url('../social-icons/soundcloud.svg');
-        transform: rotate(360deg);
-
+        transform: scale(1.2);
+        // transform: rotate(360deg);
       }
     }
     .email{
       background-image: url('../social-icons/email-grey.svg');
       &:hover{
         background-image: url('../social-icons/email.svg');
-        transform: rotate(360deg);
-
+        transform: scale(1.2);
+        // transform: rotate(360deg);
       }
     }
   }
@@ -439,6 +429,28 @@ footer{
 }
 
 @media only screen and (max-width: 580px) {
+
+  h1{
+    font-size: 45px;
+  }
+
+  .experience-section{
+    .awards{
+      >div{
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .awards-dates{
+      p{
+        margin: 0;
+      }
+    }
+    .awards{
+      padding-top: 35px;
+    }
+  }
+
   .awards-section{
     .sections{
       width: 100%;
