@@ -59,4 +59,35 @@ $(document).ready(function() {
       }
     }
   });
+  var modal = $('#myModal');
+  var modalButton = $(".modalButton");
+  var span = $(".close");
+
+  modalButton.click(function(e) {
+    modal.css("opacity","1");
+    modal.css("visibility","visible");
+    fillModal(e);
+  });
+
+  span.click(function() {
+    hideModal()
+  });
+
+  $(window).click(function(e) {
+    if (e.target == modal[0]) {
+      hideModal()
+    }
+  })
+
+  function fillModal(e){
+    var originalModalInfo= e.target.parentNode.parentNode.parentNode;
+    var modalInfo= $(originalModalInfo).clone();
+    $(".modal-content").empty();
+    $(".modal-content").append(modalInfo);
+  }
+
+  function hideModal(){
+    modal.css("opacity","0");
+    modal.css("visibility","hidden");
+  }
 });

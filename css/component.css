@@ -203,7 +203,7 @@ html.js,
 
 .menu-button {
 	position: absolute;
-	z-index: 1000;
+	z-index: 10;
 	top: 30px;
 	left: 30px;
 	/*width: 30px;
