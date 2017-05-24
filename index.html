@@ -9,7 +9,7 @@
 	<meta name="keywords" content="blueprint, template, html, css, page stack, 3d, perspective, navigation, menu" />
 	<title>Rebus.io</title>
 	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="#">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -23,6 +23,23 @@
 </head>
 
 <body>
+	<div class="menu-overlayer" id="menuOverlayer">
+		<div class="menu-item-wrapper">
+			<div class="menu-item item-1">
+				<a href="#">work</a>
+			</div>
+			<div class="menu-item item-2">
+				<a href="#">about</a>
+			</div>
+			<div class="menu-item item-3">
+				<a href="#">experience</a>
+			</div>
+			<div class="menu-item item-4">
+				<a href="#">contact</a>
+			</div>
+		</div>
+	</div>
+	<div class="burger-container">☰</div>
 	<!-- navigation -->
 	<nav class="pages-nav">
 		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Rebus.io</a></div>
@@ -43,82 +60,15 @@
 				<span class="bp-header__present">Blueprint <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
 				<h1 class="bp-header__title">Rebus.io</h1>
 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
-				<!-- <nav class="bp-nav">
-					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="Blueprints archive"><span>Go to the archive</span></a>
-				</nav> -->
+
 			</header>
-			<!-- <img class="poster" src="images/1.jpg" alt="img01" />-->
-      <div class="menu-overlayer" id="menuOverlayer">
-        <div class="menu-item-wrapper">
-          <div class="menu-item item-1">
-            <a href="#">work</a>
-          </div>
-          <div class="menu-item item-2">
-            <a href="#">about</a>
-          </div>
-          <div class="menu-item item-3">
-            <a href="#">experience</a>
-          </div>
-          <div class="menu-item item-4">
-            <a href="#">contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="burger-wrapper">
-          <div id="burgerContainer" class="burger-container">
-              <div id="burger" class="burger">
-                  <a>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                  </a>
-              </div>
-          </div>
-      </div>
+
 		</div>
 		<!-- /page -->
 
-		<div class="page" id="page-software"><!--
-			<header class="bp-header cf">
-				<h1 class="bp-header__title">invisible yo</h1>
-				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
-				<p class="info">
-					"I decided to pick the diet that I thought would maximize my chances of long-term survival." &mdash; Al Gore
-				</p>
-			</header>
-			<img class="poster" src="images/3.jpg" alt="img03" />-->
-		</div>
+		<div class="page" id="page-software"></div>
 		<div class="page" id="page-custom">
-			<div class="menu-overlayer" id="menuOverlayer">
-        <div class="menu-item-wrapper">
-          <div class="menu-item item-1">
-            <a href="#">work</a>
-          </div>
-          <div class="menu-item item-2">
-            <a href="#">about</a>
-          </div>
-          <div class="menu-item item-3">
-            <a href="#">experience</a>
-          </div>
-          <div class="menu-item item-4">
-            <a href="#">contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="burger-wrapper">
-          <div id="burgerContainer" class="burger-container">
-              <div id="burger" class="burger">
-                  <a>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                  </a>
-              </div>
-          </div>
-      </div>
+
       <div class="page-content" id="pageContent">
         <header>
           <div class="central-panel">
@@ -211,7 +161,7 @@
         <div class="awards-section">
           <div class="central-panel">
             <div class="sections skills-chart">
-
+							<canvas id="myChart" width="400" height="400"></canvas>
             </div>
             <div class="sections awards-wrapper">
               <h2 class="title">awards</h2>
@@ -294,41 +244,16 @@
             </div>
           </div>
         </div>
-        <footer>
-          <div class="central-panel">
-            <p class="frontend-brand">Front End Developer/UX Designer</p>
-          </div>
-        </footer>
+				<div class="footer-section">
+					<div class="central-panel">
+						<p>Front End Developer/UX Designer</p>
+					</div>
+				</div>
       </div>
 		</div>
 		<div class="page" id="page-training">
-      <div class="menu-overlayer" id="menuOverlayer">
-        <div class="menu-item-wrapper">
-          <div class="menu-item item-1">
-            <a href="#">work</a>
-          </div>
-          <div class="menu-item item-2">
-            <a href="#">about</a>
-          </div>
-          <div class="menu-item item-3">
-            <a href="#">experience</a>
-          </div>
-          <div class="menu-item item-4">
-            <a href="#">contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="burger-wrapper">
-          <div id="burgerContainer" class="burger-container">
-              <div id="burger" class="burger">
-                  <a>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                     <span>&nbsp;</span>
-                  </a>
-              </div>
-          </div>
-      </div>
+
+
       <div class="page-content" id="pageContent">
         <header>
           <div class="central-panel">
@@ -504,11 +429,11 @@
             </div>
           </div>
         </div>
-        <footer>
-          <div class="central-panel">
-            <p class="frontend-brand">Front End Developer/UX Designer</p>
-          </div>
-        </footer>
+				<div class="footer-section">
+					<div class="central-panel">
+						<p class="frontend-brand">Front End Developer/UX Designer</p>
+					</div>
+				</div>
       </div>
 		</div>
 	</div>
@@ -517,6 +442,7 @@
     <a href="#">rebus</a>
   </button>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
 	<script src="scripts/classie.js"></script>
 	<script src="scripts/main.js"></script>
   <script src="scripts/scripts.js"></script>

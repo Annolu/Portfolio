@@ -74,6 +74,7 @@
 					page.style.WebkitTransform = 'translate3d(0,35%,-300px)';
 					page.style.transform = 'translate3d(0,35%,-300px)';
 				}
+				
 			}
 			else {
 				classie.remove(page, 'page--inactive');

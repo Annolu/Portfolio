@@ -14,9 +14,10 @@ body{
 
 h1{
   font-family: 'avenirHeavy';
-  font-size: 65px;
+  font-size: 50px;
   margin: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 h2{
@@ -73,53 +74,17 @@ a{
   }
 }
 
-.burger-wrapper{
-  width: 100%;
-  position: fixed;
-  z-index: 3;
-}
+
 
 .burger-container{
-  position: absolute;
+  position: fixed!important;
   display: inline-block;
   top: 40px;
   right: 40px;
   transition: all 200ms ease-in-out;
-  .burger{
-    cursor: pointer;
-    display: block;
-  }
-  span{
-    transform-origin: center center;
-    background: $transparent-black;
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 0 auto 7px;
-    position: relative;
-    top: 0;
-    // transition: all 200ms linear;
-    &:nth-child(2){
-      width: 37px;
-    }
-  }
-  &.open{
-    span{
-      background-color: white;
-      &:nth-child(1){
-        transform: rotate(-45deg);
-        top: 9px;
-      }
-      &:nth-child(2){
-        width: 0;
-        opacity: 0;
-      }
-      &:nth-child(3){
-        transform: rotate(45deg);
-        top: -11px;
-      }
-    }
-  }
+  z-index: 3;
+  color:white;
+  cursor: pointer;
 }
 
 .menu-overlayer{
@@ -163,15 +128,21 @@ a{
 
 header{
   background-color: $dark-bg;
+  background-image: url('../images/header-bkg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .frontend-brand{
   color: $font-pink;
   font-family: 'avenirBold';
+  font-size: 16px;
+  margin: 0 0 20px 0;
 }
 
 .header-title-wrapper{
-  padding: 80px 0px 10px 0;
+  padding: 80px 0px 50px 0;
   width: 60%;
   .header-title{
     color: white;
@@ -183,7 +154,9 @@ header{
     font-size: 28px;
     color: white;
     text-shadow: $text-shadow;
+    margin: 0 0 20px 0;
   }
+
 }
 
 .projects{
@@ -206,6 +179,7 @@ header{
       // max-width: 300px;
     }
     h3{
+      margin-top: 0;
       color: $font-dark;
     }
     a{
@@ -249,7 +223,7 @@ header{
 }
 
 .sections-title{
-  padding: 25px 0;
+  padding: 50px 0 0 0;
   text-align: center;
   .content{
     // width: 185px;
@@ -278,6 +252,12 @@ header{
 
 .about-section{
   padding-bottom: 50px;
+  padding-top: 50px;
+  background-image: url('../images/about-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #F7F7F7;
   .subparagraph{
     font-size: 16px;
     margin: 40px 0px;
@@ -286,18 +266,27 @@ header{
     text-align: center;
   }
 }
-
+.work-section{
+  .sections-title{
+    padding: 0;
+  }
+}
 .awards-section{
   padding-bottom: 50px;
+  padding-top: 150px;
+  background-image: url('../images/awards-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #FFFFFF;
   .skills-chart{
     display: inline-block;
     height: 400px;
     width: 50%;
-    background-color: #ccc;
+    // background-color: #ccc;
   }
   .awards-wrapper{
     float: right;
-    text-align: center;
     width: 45%;
   }
   p{
@@ -312,8 +301,13 @@ header{
 }
 
 .experience-section{
+  padding-top: 80px;
   padding-bottom: 50px;
   background-color: $dark-bg;
+  background-image: url('../images/experience-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   color: white;
   h1{
     text-shadow: $text-shadow;
@@ -348,7 +342,12 @@ header{
 }
 
 .contact-section{
+  padding-top: 100px;
   padding-bottom: 50px;
+  background-image: url('../images/contact-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   .content{
     // width: 275px;
     white-space: nowrap;
@@ -414,11 +413,21 @@ header{
   }
 }
 
-footer{
-  text-align: center;
+.footer-section{
+  background-image: url('../images/footer-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 100px;
+  height: 170px;
+  background-color: #f7f7f7;
   p{
+    text-align: center;
     padding: 25px 0;
     margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color:$font-pink;
   }
 }
 

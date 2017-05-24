@@ -18,9 +18,10 @@ body {
 
 h1 {
   font-family: 'avenirHeavy';
-  font-size: 65px;
+  font-size: 50px;
   margin: 0;
-  text-transform: capitalize; }
+  text-transform: uppercase;
+  letter-spacing: 5px; }
 
 h2 {
   text-transform: uppercase;
@@ -64,42 +65,15 @@ a {
   transition: all 200ms ease-out;
   background-color: white; }
 
-.burger-wrapper {
-  width: 100%;
-  position: fixed;
-  z-index: 3; }
-
 .burger-container {
-  position: absolute;
+  position: fixed !important;
   display: inline-block;
   top: 40px;
   right: 40px;
-  transition: all 200ms ease-in-out; }
-  .burger-container .burger {
-    cursor: pointer;
-    display: block; }
-  .burger-container span {
-    transform-origin: center center;
-    background: rgba(0, 0, 0, 0.4);
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 0 auto 7px;
-    position: relative;
-    top: 0; }
-    .burger-container span:nth-child(2) {
-      width: 37px; }
-  .burger-container.open span {
-    background-color: white; }
-    .burger-container.open span:nth-child(1) {
-      transform: rotate(-45deg);
-      top: 9px; }
-    .burger-container.open span:nth-child(2) {
-      width: 0;
-      opacity: 0; }
-    .burger-container.open span:nth-child(3) {
-      transform: rotate(45deg);
-      top: -11px; }
+  transition: all 200ms ease-in-out;
+  z-index: 3;
+  color: white;
+  cursor: pointer; }
 
 .menu-overlayer {
   width: 100%;
@@ -112,7 +86,7 @@ a {
   .menu-overlayer .menu-item-wrapper {
     padding-top: 170px; }
   .menu-overlayer .menu-item {
-    background-color: #443b8c;
+    background-color: #282071;
     text-align: center;
     margin: 10px 0;
     padding: 20px 0 15px;
@@ -132,7 +106,7 @@ a {
     .menu-overlayer .menu-item a {
       text-decoration: none;
       color: white;
-      text-shadow: 0px 4px 0px #141414; }
+      text-shadow: 0px 2px 0px #141414; }
   .menu-overlayer.open {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 1;
@@ -141,24 +115,31 @@ a {
       transform: rotateX(0deg); }
 
 header {
-  background-color: #443b8c; }
+  background-color: #282071;
+  background-image: url("../images/header-bkg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom; }
 
 .frontend-brand {
   color: #f56aa1;
-  font-family: 'avenirBold'; }
+  font-family: 'avenirBold';
+  font-size: 16px;
+  margin: 0 0 20px 0; }
 
 .header-title-wrapper {
-  padding: 80px 0px 10px 0;
+  padding: 80px 0px 50px 0;
   width: 60%; }
   .header-title-wrapper .header-title {
     color: white;
-    text-shadow: 0px 4px 0px #141414; }
+    text-shadow: 0px 2px 0px #141414; }
   .header-title-wrapper .header-subtitle {
     text-transform: uppercase;
     letter-spacing: 15px;
     font-size: 28px;
     color: white;
-    text-shadow: 0px 4px 0px #141414; }
+    text-shadow: 0px 2px 0px #141414;
+    margin: 0 0 20px 0; }
 
 .projects {
   padding: 30px 0; }
@@ -173,6 +154,7 @@ header {
     width: 55%;
     padding: 0 15px; }
     .projects .project-info h3 {
+      margin-top: 0;
       color: #111; }
     .projects .project-info a {
       text-decoration: underline; }
@@ -201,7 +183,7 @@ header {
   text-align: center; }
 
 .sections-title {
-  padding: 25px 0;
+  padding: 50px 0 0 0;
   text-align: center; }
   .sections-title .content {
     margin: 30px 0;
@@ -221,23 +203,36 @@ header {
     display: table; }
 
 .about-section {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-image: url("../images/about-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #F7F7F7; }
   .about-section .subparagraph {
     font-size: 16px;
     margin: 40px 0px; }
   .about-section .content {
     text-align: center; }
 
+.work-section .sections-title {
+  padding: 0; }
+
 .awards-section {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-top: 150px;
+  background-image: url("../images/awards-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #FFFFFF; }
   .awards-section .skills-chart {
     display: inline-block;
     height: 400px;
-    width: 50%;
-    background-color: #ccc; }
+    width: 50%; }
   .awards-section .awards-wrapper {
     float: right;
-    text-align: center;
     width: 45%; }
   .awards-section p {
     text-align: left;
@@ -248,11 +243,16 @@ header {
     display: table; }
 
 .experience-section {
+  padding-top: 80px;
   padding-bottom: 50px;
-  background-color: #443b8c;
+  background-color: #282071;
+  background-image: url("../images/experience-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   color: white; }
   .experience-section h1 {
-    text-shadow: 0px 4px 0px #141414; }
+    text-shadow: 0px 2px 0px #141414; }
   .experience-section .right-span {
     border-left-color: white; }
   .experience-section .awards > div {
@@ -274,7 +274,12 @@ header {
       font-size: 26px; }
 
 .contact-section {
-  padding-bottom: 50px; }
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-image: url("../images/contact-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top; }
   .contact-section .content {
     white-space: nowrap; }
   .contact-section .social-media ul {
@@ -317,11 +322,21 @@ header {
       background-image: url("../social-icons/email.svg");
       transform: scale(1.2); }
 
-footer {
-  text-align: center; }
-  footer p {
+.footer-section {
+  background-image: url("../images/footer-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 100px;
+  height: 170px;
+  background-color: #f7f7f7; }
+  .footer-section p {
+    text-align: center;
     padding: 25px 0;
-    margin: 0; }
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f56aa1; }
 
 @media only screen and (max-width: 880px) {
   .central-panel {
