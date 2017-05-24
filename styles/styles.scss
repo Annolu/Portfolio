@@ -132,6 +132,7 @@ header{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  min-height: 350px;
 }
 
 .frontend-brand{
@@ -411,6 +412,23 @@ header{
       }
     }
   }
+}
+.planets-rebus{
+  top: 80px;
+  left:60%;
+  position: absolute;
+  background-image: url('../images/planets.svg');
+  background-repeat: no-repeat;
+  height:86px;
+  width:230px;
+}
+.abeja{
+  background-image: url('../images/abeja.svg');
+  background-repeat: no-repeat;
+  height:66px;
+  width:55px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .footer-section{
