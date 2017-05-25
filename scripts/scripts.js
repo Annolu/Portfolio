@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  setInterval(hideLoader, 500)
+
   let burger= $('.burger-container');
 
   burger.click(openMenu);
@@ -21,10 +23,6 @@ $(document).ready(function() {
 
   function bodyNoScroll() {
     $('body').toggleClass('no-scroll')
-  }
-
-  function scaleBody() {
-    $('.page-content').toggleClass('scale-content');
   }
 
   let ctx = document.getElementById("myChart");
@@ -51,7 +49,7 @@ $(document).ready(function() {
       scale: {
         reverse: true,
         ticks: {
-            beginAtZero: true
+          beginAtZero: true
         }
       }
     }
@@ -60,38 +58,25 @@ $(document).ready(function() {
   let modalButton = $(".modalButton");
   let span = $(".close");
 
-
-  // $(document).on('click', 'a', function(event){
-  //   event.preventDefault();
-  //
-  //   $('html, body').animate({
-  //       scrollTop: $( $.attr(this, 'href') ).offset().top
-  //   }, 500);
-  // });
-
   $('li a[href^="#"]').on('click',function (e) {
      e.preventDefault();
 
      var target = this.hash;
      var $target = $(target);
-    //  console.log($target.offset().top);
 
      $('html, body').stop().animate({
-         'scrollTop': $target.offset().top
-     }, 900, 'swing', function () {
-         window.location.hash = target;
-     });
+        'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+        window.location.hash = target;
+    });
   })
 
   modalButton.click(function(e) {
     modal.addClass('show-modal');
-    // modal.css("opacity","1");
-    // modal.css("visibility","visible");
     fillModal(e);
   });
 
   span.click(function() {
-    // hideModal()
     modal.removeClass('show-modal');
   });
 
@@ -102,7 +87,6 @@ $(document).ready(function() {
       toggleOverlayer();
     }
     if (e.target == modal[0]) {
-      // hideModal()
       modal.removeClass('show-modal');
     }
   })
@@ -114,8 +98,8 @@ $(document).ready(function() {
     $(".modal-content").append(modalInfo);
   }
 
-  // function hideModal(){
-  //   modal.css("opacity","0");
-  //   modal.css("visibility","hidden");
-  // }
+  function hideLoader(){
+    let loader= $('.loader-overlayer');
+    loader.addClass('hide-loader');
+  }
 });

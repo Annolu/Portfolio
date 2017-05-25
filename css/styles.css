@@ -61,6 +61,33 @@ a {
   width: 70%;
   margin: 0 auto; }
 
+.loader-overlayer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #282071;
+  z-index: 14;
+  transition: all 200ms ease; }
+  .loader-overlayer.hide-loader {
+    opacity: 0;
+    visibility: hidden; }
+  .loader-overlayer .loader-wrapper {
+    text-align: center;
+    margin-top: 290px; }
+  .loader-overlayer .loader {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: white;
+    animation: rotateSpinner 800ms ease infinite; }
+
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 .page-content {
   transition: all 200ms ease-out;
   background-color: white; }
@@ -71,8 +98,8 @@ a {
   top: 40px;
   right: 40px;
   transition: all 200ms ease-in-out;
-  z-index: 3;
-  color: white;
+  z-index: 13;
+  color: #8f86dc;
   cursor: pointer; }
 
 .menu-overlayer {
@@ -81,7 +108,7 @@ a {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  z-index: 2;
+  z-index: 11;
   transition: all 200ms ease; }
   .menu-overlayer .menu-item-wrapper {
     padding-top: 170px; }
@@ -367,7 +394,7 @@ header {
 /*///////////modal/////////*/
 .modal {
   position: fixed;
-  z-index: 11;
+  z-index: 13;
   left: 0;
   top: 0;
   width: 100%;
