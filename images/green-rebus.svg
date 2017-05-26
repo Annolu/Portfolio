@@ -1,0 +1,24 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="120px" height="40px" viewBox="0 0 120 40">
+<defs>
+<g id="rebus_green_0_Layer0_0_FILL">
+<path fill="#1494EA" stroke="none" d="
+M 0 0
+L 0 40 30 40 30 0 0 0 Z"/>
+
+<path fill="#FFFFFF" stroke="none" d="
+M 65 13.5
+L 65 0 50 0 50 13.5 37.5 13.5 37.5 28.5 50 28.5 50 40 65 40 65 28.5 77.5 28.5 77.5 13.5 65 13.5 Z"/>
+
+<path fill="#FFCC01" stroke="none" d="
+M 121.5 40
+L 121.5 0 91.5 0 91.5 40 121.5 40 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 0.9876556396484375, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#rebus_green_0_Layer0_0_FILL"/>
+</g>
+</g>
+</svg>

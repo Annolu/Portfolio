@@ -10,7 +10,7 @@ $(document).ready(function() {
     animateBurger();
     toggleOverlayer();
     bodyNoScroll();
-    scaleBody();
+    //scaleBody();
   }
 
   function animateBurger(){
@@ -25,12 +25,12 @@ $(document).ready(function() {
     $('body').toggleClass('no-scroll')
   }
 
-  let ctx = document.getElementById("myChart");
+  let ctx = document.getElementById("augusto-chart");
   let data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "My First dataset",
+        label: "SKILLZ",
         backgroundColor: [
             'rgba(254, 230, 75, 0.4)'
         ],
@@ -57,19 +57,30 @@ $(document).ready(function() {
   let modal = $('#myModal');
   let modalButton = $(".modalButton");
   let span = $(".close");
-
-  $('li a[href^="#"]').on('click',function (e) {
+/*
+  $('a[href^="#"]').on('click',function (e) {
      e.preventDefault();
 
      var target = this.hash;
      var $target = $(target);
 
-     $('html, body').stop().animate({
+     $('#page-augusto').stop().animate({
         'scrollTop': $target.offset().top
       }, 900, 'swing', function () {
         window.location.hash = target;
     });
   })
+*/
+
+  $('a[href^="#"]').on('click', function(event) {
+    let target = $(this.getAttribute('href'));
+    if( target.length ) {
+      event.preventDefault();
+      $('#page-augusto').stop().animate({
+          scrollTop: target.offset().top
+      }, 500);
+    }
+  });
 
   modalButton.click(function(e) {
     modal.addClass('show-modal');

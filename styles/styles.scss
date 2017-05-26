@@ -28,12 +28,12 @@ h2{
 
 h3{
   font-family: 'avenirBold';
-  font-size: 23px;
+  font-size: 18px;
 }
 
 p{
   font-family: 'avenirRegular';
-  font-size: 21px;
+  font-size: 16px;
   color: $font-dark-muted;
 }
 
@@ -41,7 +41,7 @@ a{
   color: $font-pink;
   font-family: 'avenirBold';
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .no-scroll{
@@ -257,7 +257,6 @@ header{
 }
 
 .sections-title{
-  padding: 50px 0 0 0;
   text-align: center;
   .content{
     margin: 30px 0;
@@ -316,6 +315,7 @@ header{
     display: inline-block;
     height: 400px;
     width: 50%;
+    float: left;
   }
   .awards-wrapper{
     float: right;
@@ -349,7 +349,7 @@ header{
   }
   .awards{
     >div{
-      width: 49%;
+      width: 40%;
       display: inline-block;
     }
   }
@@ -358,9 +358,9 @@ header{
     vertical-align: top;
     p{
       color: white;
-      font-size: 33px;
+      font-size: 24px;
       font-family: 'avenirBold';
-      margin: 60px 70px 0 0;
+      margin: 10px 30px 0 0;
     }
   }
   .awards-details{
@@ -368,13 +368,14 @@ header{
     max-width: 400px;
     .awards-headers{
       color: white;
-      font-size: 26px;
+      font-size: 16px;
+      margin-bottom: 0;
     }
   }
 }
 
 .contact-section{
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
   background-image: url('../images/contact-top.svg');
   background-size: contain;
@@ -456,18 +457,89 @@ header{
   display: inline-block;
   margin-left: 15px;
 }
-
+.trophy{
+  background-image: url('../images/trophy.svg');
+  background-repeat: no-repeat;
+  height:64px;
+  width:64px;
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+}
+.g-love{
+  background-image: url('../images/g-love.svg');
+  background-repeat: no-repeat;
+  height:100px;
+  width:100px;
+  display: inline-block;
+  margin-left: 15px;
+}
+.face-rebus{
+  background-image: url('../images/face.svg');
+  background-repeat: no-repeat;
+  height:30px;
+  width:90px;
+  display: inline-block;
+  float: right;
+  margin-top: 25px;
+}
+.bat-rebus{
+  background-image: url('../images/bat-rebus.svg');
+  background-repeat: no-repeat;
+  height:58px;
+  width:80px;
+  display: inline-block;
+  float: right;
+  margin-top:-30px;
+  margin-bottom: 30px;
+}
+.card-rebus{
+  background-image: url('../images/card-rebus.svg');
+  background-repeat: no-repeat;
+  height:48px;
+  width:79px;
+  display: inline-block;
+  float: right;
+  margin-top: -70px;
+}
+.green-rebus{
+  background-image: url('../images/green-rebus.svg');
+  background-repeat: no-repeat;
+  height:40px;
+  width:120px;
+  display: inline-block;
+  margin-left: 15px;
+}
+.gallina{
+  background-image: url('../images/gallina.svg');
+  background-repeat: no-repeat;
+  height:110px;
+  width:120px;
+  display: inline-block;
+  margin-top: -50px;
+}
+.flight-rebus{
+  background-image: url('../images/flight-rebus.svg');
+  background-repeat: no-repeat;
+  height:70px;
+  width:70px;
+  float: right;
+}
+#augusto-chart{
+  max-height: 450px;
+  max-width: 450px;
+}
 .footer-section{
   background-image: url('../images/footer-top.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
-  padding-top: 100px;
+  padding-top: 80px;
   height: 170px;
   background-color: #f7f7f7;
   p{
     text-align: center;
-    padding: 25px 0;
+    padding: 25px 40px;
     margin: 0;
     font-size: 16px;
     font-weight: bold;
