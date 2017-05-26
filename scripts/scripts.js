@@ -10,7 +10,6 @@ $(document).ready(function() {
     animateBurger();
     toggleOverlayer();
     bodyNoScroll();
-    //scaleBody();
   }
 
   function animateBurger(){
@@ -26,16 +25,43 @@ $(document).ready(function() {
   }
 
   let ctx = document.getElementById("augusto-chart");
+
+  let listOfDates= $('.projects-wrapper');
+  let workSectionHeight = listOfDates.height();
+  let initHeight = "1050px";
+  let buttonViewMore= $(".buttons");
+
+  listOfDates.css('height', initHeight);
+
+
+  buttonViewMore.click(loadMoreWorks);
+
+  function loadMoreWorks(){
+    $('.work-loader-wrapper').css('opacity', '1');
+
+    setTimeout(function(){
+      $('.work-loader-wrapper').css('opacity', '0');
+      if(listOfDates.css('height') == initHeight && workSectionHeight > 2100){
+        listOfDates.css('height', "2100px")
+      }else{
+        console.log('dentro');
+        listOfDates.css('height', workSectionHeight+"px")
+        buttonViewMore.css('visibility', 'hidden');
+        setTimeout(function(){buttonViewMore.css({'opacity':'0', 'display': 'none'})}, 800)
+      }
+    }, 800);
+  }
+
   let data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
         label: "SKILLZ",
         backgroundColor: [
-            'rgba(254, 230, 75, 0.4)'
+          'rgba(254, 230, 75, 0.4)'
         ],
         borderColor: [
-            'rgba(254, 230, 75, 1)'
+          'rgba(254, 230, 75, 1)'
         ],
         borderWidth: 1,
         data: [65, 59, 80, 81, 56, 55, 40],
@@ -61,8 +87,8 @@ $(document).ready(function() {
   $('a[href^="#"]').on('click',function (e) {
      e.preventDefault();
 
-     var target = this.hash;
-     var $target = $(target);
+     let target = this.hash;
+     let $target = $(target);
 
      $('#page-augusto').stop().animate({
         'scrollTop': $target.offset().top

@@ -197,6 +197,12 @@ header{
   }
 }
 
+
+.projects-wrapper{
+  overflow-y: hidden;
+  transition: all 800ms ease-in-out;
+}
+
 .projects{
   padding: 30px 0;
   &.projects-right{
@@ -240,20 +246,54 @@ header{
 
 .buttons{
   margin: 30px auto;
-  display: inline-block;
+  display: block;
   border: 2px solid $font-pink;
-  padding: 15px 20px 10px 20px;
   border-radius: 2px;
   transition: all 200ms ease;
   text-decoration: none;
+  cursor: pointer;
+  width: 250px;
+  height: 53px;
+  position: relative;
+  opacity: 1;
+  a{
+    transition: all 200ms ease;
+    margin: 15px 20px 10px 20px;
+    display: block;
+  }
   &:hover{
     background-color: $font-pink;
-    color: white;
+    a{
+      color: white;
+      pointer-events: none;
+    }
   }
 }
 
 .centre-button{
   text-align: center;
+}
+
+.work-loader-wrapper{
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: all 200ms ease;
+  opacity: 0;
+  .work-loader{
+    margin-top: 8px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: $font-pink;
+    animation: rotateSpinner 800ms ease infinite;
+  }
 }
 
 .sections-title{
@@ -578,7 +618,6 @@ header{
     position: relative;
     transition: all 300ms ease;
   }
-
 }
 
 .close {

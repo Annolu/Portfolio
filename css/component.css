@@ -141,7 +141,7 @@ html.js,
 /* Pages stack */
 
 .js .pages-stack {
-	z-index: 100;
+	z-index: 10;
 	pointer-events: none;
 	-webkit-perspective: 1200px;
 	perspective: 1200px;
@@ -320,7 +320,7 @@ html.js,
 	.pages-nav__item--social {
 		font-size: 0.9em;
 	}
-	
+
 	.info {
 		font-size: 0.85em;
 	}
