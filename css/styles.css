@@ -154,8 +154,7 @@ header {
   background-image: url("../images/header-bkg.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
-  min-height: 350px; }
+  background-position: bottom; }
 
 .frontend-brand {
   color: #f56aa1;
@@ -164,7 +163,7 @@ header {
   margin: 0 0 20px 0; }
 
 .header-title-wrapper {
-  padding: 80px 0px 50px 0;
+  padding: 30px 0px;
   width: 60%; }
   .header-title-wrapper .header-title {
     color: white;
@@ -359,13 +358,14 @@ header {
       transform: scale(1.2); }
 
 .planets-rebus {
-  top: 80px;
-  left: 60%;
+  top: 30px;
+  left: 65%;
   position: absolute;
   background-image: url("../images/planets.svg");
   background-repeat: no-repeat;
-  height: 86px;
-  width: 230px; }
+  background-size: contain;
+  height: 70px;
+  width: 300px; }
 
 .abeja {
   background-image: url("../images/abeja.svg");
@@ -430,6 +430,15 @@ header {
     text-decoration: none;
     cursor: pointer; }
 
+@media only screen and (min-width: 1300px) {
+  header {
+    min-height: 275px; }
+
+  .header-title-wrapper {
+    padding: 50px 0; }
+
+  .planets-rebus {
+    top: 50px; } }
 @media only screen and (max-width: 880px) {
   .central-panel {
     width: 90%; } }

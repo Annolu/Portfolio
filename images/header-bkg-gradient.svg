@@ -1,0 +1,148 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1200px" height="200px" viewBox="0 0 1200 200">
+<defs>
+<linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="928.9125" y1="43.824999999999996" x2="934.7875" y2="122.17500000000001" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_2" gradientUnits="userSpaceOnUse" x1="993.2249999999999" y1="70.175" x2="996.875" y2="119.02499999999999" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_3" gradientUnits="userSpaceOnUse" x1="1031.8000000000002" y1="86.0625" x2="1140.5" y2="131.7375" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_4" gradientUnits="userSpaceOnUse" x1="1150" y1="73.1" x2="1040" y2="73.1" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_5" gradientUnits="userSpaceOnUse" x1="599.95" y1="200" x2="599.95" y2="40" spreadMethod="pad">
+<stop  offset="0%" stop-color="#405681"/>
+
+<stop  offset="100%" stop-color="#282071"/>
+</linearGradient>
+
+<linearGradient id="Gradient_6" gradientUnits="userSpaceOnUse" x1="1201.9875000000002" y1="91.73750000000001" x2="1153.3125" y2="85.0625" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_7" gradientUnits="userSpaceOnUse" x1="1135.2875" y1="21.6" x2="1177.8125" y2="92.80000000000001" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_8" gradientUnits="userSpaceOnUse" x1="500.04999999999995" y1="127.05" x2="690.05" y2="127.05" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_9" gradientUnits="userSpaceOnUse" x1="799.8" y1="87.925" x2="691" y2="138.175" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_10" gradientUnits="userSpaceOnUse" x1="900" y1="61.7" x2="790" y2="61.7" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_11" gradientUnits="userSpaceOnUse" x1="760.75" y1="113.10000000000001" x2="880.25" y2="117.8" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<linearGradient id="Gradient_12" gradientUnits="userSpaceOnUse" x1="820.95" y1="90.6625" x2="951.55" y2="111.4375" spreadMethod="pad">
+<stop  offset="0%" stop-color="#433B8B"/>
+
+<stop  offset="100%" stop-color="#291556"/>
+</linearGradient>
+
+<g id="Layer0_0_FILL">
+<path fill="#433B8B" stroke="none" d="
+M 970 40.75
+L 970 108.95 1040 66.65 970 40.75
+M 970 40.75
+L 900 46.75 890 76.6 970 40.75
+M 690.05 136.15
+L 790 66.65 645 106.9 690.05 136.15
+M 820 96.55
+L 890 76.6 790 66.65 760 132.1 820 96.55 Z"/>
+
+<path fill="url(#Gradient_1)" stroke="none" d="
+M 950 121.05
+L 970 108.95 970 40.75 890 76.6 950 121.05 Z"/>
+
+<path fill="url(#Gradient_2)" stroke="none" d="
+M 1040 115.8
+L 1040 66.65 970 108.95 950 121.05 1040 115.8 Z"/>
+
+<path fill="url(#Gradient_3)" stroke="none" d="
+M 1040 66.65
+L 1040 115.8 1149.95 109.45 1040 66.65 Z"/>
+
+<path fill="url(#Gradient_4)" stroke="none" d="
+M 1149.95 109.45
+L 1150 109.4 1110 36.75 1040 66.65 1149.95 109.45 Z"/>
+
+<path fill="url(#Gradient_5)" stroke="none" d="
+M 1200 66.65
+L 1200 0 0 0 0 176.25 500.05 147.2 645 106.9 790 66.65 900 46.75 970 40.75 1040 66.65 1110 36.75 1200 66.65 Z"/>
+
+<path fill="#FFFFFF" stroke="none" d="
+M 1150 109.45
+L 1149.95 109.45 1040 115.8 950 121.05 879.95 125.15 760 132.1 690.05 136.15 500.05 147.2 0 176.25 0 200 1200 200 1200 106.5 1150 109.45 Z"/>
+
+<path fill="#281757" stroke="none" d="
+M 1150 109.4
+L 1149.95 109.45 1150 109.45 1150 109.4 Z"/>
+
+<path fill="url(#Gradient_6)" stroke="none" d="
+M 1150 109.45
+L 1200 106.5 1200 66.65 1150 109.45 Z"/>
+
+<path fill="url(#Gradient_7)" stroke="none" d="
+M 1150 109.4
+L 1150 109.45 1200 66.65 1110 36.75 1150 109.4 Z"/>
+
+<path fill="url(#Gradient_8)" stroke="none" d="
+M 645 106.9
+L 500.05 147.2 690.05 136.15 645 106.9 Z"/>
+
+<path fill="url(#Gradient_9)" stroke="none" d="
+M 790 66.65
+L 690.05 136.15 760 132.1 790 66.65 Z"/>
+
+<path fill="url(#Gradient_10)" stroke="none" d="
+M 890 76.6
+L 900 46.75 790 66.65 890 76.6 Z"/>
+
+<path fill="url(#Gradient_11)" stroke="none" d="
+M 879.95 125.15
+L 820 96.55 760 132.1 879.95 125.15 Z"/>
+
+<path fill="url(#Gradient_12)" stroke="none" d="
+M 890 76.6
+L 820 96.55 879.95 125.15 950 121.05 890 76.6 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer0_0_FILL"/>
+</g>
+</svg>

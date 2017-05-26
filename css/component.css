@@ -204,8 +204,8 @@ html.js,
 .menu-button {
 	position: absolute;
 	z-index: 10;
-	top: 30px;
-	left: 30px;
+	bottom: 20px;
+	left: 20px;
 	/*width: 30px;
 	height: 24px;*/
 	padding: 0;
@@ -320,11 +320,7 @@ html.js,
 	.pages-nav__item--social {
 		font-size: 0.9em;
 	}
-	.menu-button {
-		top: 15px;
-		right: 10px;
-		left: auto;
-	}
+	
 	.info {
 		font-size: 0.85em;
 	}

@@ -38,7 +38,7 @@
 		// total number of page elements
 		pagesTotal = pages.length,
 		// index of current page
-		current = 0,
+		current = 1,
 		// menu button
 		menuCtrl = document.querySelector('button.menu-button'),
 		// the navigation wrapper
@@ -74,7 +74,7 @@
 					page.style.WebkitTransform = 'translate3d(0,35%,-300px)';
 					page.style.transform = 'translate3d(0,35%,-300px)';
 				}
-				
+
 			}
 			else {
 				classie.remove(page, 'page--inactive');
