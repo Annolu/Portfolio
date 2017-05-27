@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  setInterval(hideLoader, 500)
+  setInterval(hideLoader, 500);
 
   let burger= $('.burger-container');
 
@@ -26,30 +26,38 @@ $(document).ready(function() {
 
   let ctx = document.getElementById("augusto-chart");
 
-  let listOfDates= $('.projects-wrapper');
-  let workSectionHeight = listOfDates.height();
+  let projectsSection= $('.projects-wrapper');
+  let projectsSectionHeight = projectsSection.height();
   let initHeight = "1050px";
   let buttonViewMore= $(".buttons");
 
-  listOfDates.css('height', initHeight);
+  projectsSection.css('height', initHeight);
 
 
   buttonViewMore.click(loadMoreWorks);
 
+  //show loader in work-button, for 800ms only
   function loadMoreWorks(){
     $('.work-loader-wrapper').css('opacity', '1');
+    setTimeout(showWorkLoader, 800);
+  }
 
-    setTimeout(function(){
-      $('.work-loader-wrapper').css('opacity', '0');
-      if(listOfDates.css('height') == initHeight && workSectionHeight > 2100){
-        listOfDates.css('height', "2100px")
-      }else{
-        console.log('dentro');
-        listOfDates.css('height', workSectionHeight+"px")
-        buttonViewMore.css('visibility', 'hidden');
-        setTimeout(function(){buttonViewMore.css({'opacity':'0', 'display': 'none'})}, 800)
-      }
-    }, 800);
+  function showWorkLoader(){
+    //hide loader in work-button
+    $('.work-loader-wrapper').css('opacity', '0');
+    //if the button is clicked for the first time and there are more than 8 projects (2100px), show 4 more projects
+    if(projectsSection.css('height') == initHeight && projectsSectionHeight > 2100){
+      projectsSection.css('height', "2100px")
+    }else{
+    //if the button is clicked for a second time and there are no more projects to show, the button disappears
+      projectsSection.css('height', projectsSectionHeight+"px")
+      buttonViewMore.css('opacity','0');
+      setTimeout(hideWorkButton, 800);
+    }
+  }
+
+  function hideWorkButton() {
+    buttonViewMore.css({'display': 'none'});
   }
 
   let data = {
@@ -130,9 +138,12 @@ $(document).ready(function() {
 
   $(window).click(function(e) {
 
-    if($(e.target).hasClass("menu-item")){
+    let target= $(e.target);
+
+    if(target.hasClass("menu-item") || target.hasClass("menu-overlayer")){
       toggleOverlayer();
     }
+
     if (e.target == modal[0]) {
       modal.removeClass('show-modal');
     }
