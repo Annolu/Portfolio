@@ -38,26 +38,26 @@ $(document).ready(function() {
 
   //show loader in work-button, for 800ms only
   function loadMoreWorks(){
-    $('.work-loader-wrapper').css('opacity', '1');
+    $('.work-loader-wrapper').css('transform','rotateX(0deg)');
     setTimeout(showWorkLoader, 800);
   }
 
   function showWorkLoader(){
     //hide loader in work-button
-    $('.work-loader-wrapper').css('opacity', '0');
+    $('.work-loader-wrapper').css('transform','rotateX(90deg)');
     //if the button is clicked for the first time and there are more than 8 projects (2100px), show 4 more projects
     if(projectsSection.css('height') == initHeight && projectsSectionHeight > 2100){
       projectsSection.css('height', "2100px")
     }else{
     //if the button is clicked for a second time and there are no more projects to show, the button disappears
       projectsSection.css('height', projectsSectionHeight+"px")
-      buttonViewMore.css('opacity','0');
-      setTimeout(hideWorkButton, 800);
+      setTimeout(hideWorkButton, 200);
     }
   }
 
   function hideWorkButton() {
-    buttonViewMore.css({'display': 'none'});
+    buttonViewMore.css({'display':'none'});
+    buttonViewMore.css('opacity','0');
   }
 
   let data = {
@@ -75,8 +75,8 @@ $(document).ready(function() {
         data: [6, 9, 7, 8, 7, 6, 7],
       }
     ]
-
   };
+
   let myRadarChart = new Chart(ctx, {
     type: 'radar',
     data: data,
@@ -98,31 +98,20 @@ $(document).ready(function() {
       }
     }
   });
+
   let modal = $('#myModal');
   let modalButton = $(".modalButton");
   let span = $(".close");
-/*
-  $('a[href^="#"]').on('click',function (e) {
-     e.preventDefault();
-
-     let target = this.hash;
-     let $target = $(target);
-
-     $('#page-augusto').stop().animate({
-        'scrollTop': $target.offset().top
-      }, 900, 'swing', function () {
-        window.location.hash = target;
-    });
-  })
-*/
 
   $('a[href^="#"]').on('click', function(event) {
     let target = $(this.getAttribute('href'));
-    if( target.length ) {
+
+    if(target.length) {
       event.preventDefault();
+
       $('#page-augusto').stop().animate({
-          scrollTop: target.offset().top
-      }, 500);
+        scrollTop: target[0].offsetTop
+      }, 900);
     }
   });
 

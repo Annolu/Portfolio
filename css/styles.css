@@ -249,12 +249,14 @@ header {
   height: 100%;
   width: 100%;
   display: inline-block;
-  background-color: white;
+  background-color: #f56aa1;
   position: absolute;
   bottom: 0px;
   left: 0;
   transition: all 200ms ease;
-  opacity: 0; }
+  opacity: 1;
+  transform: rotateX(90deg);
+  transform-origin: bottom; }
   .work-loader-wrapper .work-loader {
     display: inline-block;
     box-sizing: border-box;
@@ -523,7 +525,6 @@ header {
     font-weight: bold;
     color: #f56aa1; }
 
-/*///////////modal/////////*/
 .modal {
   position: fixed;
   z-index: 13;

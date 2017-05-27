@@ -211,7 +211,6 @@ header{
   }
 }
 
-
 .projects-wrapper{
   overflow-y: hidden;
   transition: all 800ms ease-in-out;
@@ -292,12 +291,14 @@ header{
   height: 100%;
   width: 100%;
   display: inline-block;
-  background-color: white;
+  background-color: $font-pink;
   position: absolute;
   bottom: 0px;
   left: 0;
   transition: all 200ms ease;
-  opacity: 0;
+  opacity: 1;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
   .work-loader{
     display: inline-block;
     box-sizing: border-box;
@@ -617,8 +618,6 @@ header{
   }
 }
 
-/*///////////modal/////////*/
-
 .modal {
   position: fixed;
   z-index: 13;
@@ -668,6 +667,7 @@ header{
     cursor: pointer;
   }
 }
+
 @media only screen and (min-width: 1300px) {
   header{
     min-height: 275px;
