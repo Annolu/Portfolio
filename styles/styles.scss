@@ -108,8 +108,8 @@ a{
 .burger-container{
   position: fixed!important;
   display: inline-block;
-  top: 40px;
-  right: 40px;
+  top: 25px;
+  right: 25px;
   transition: all 200ms ease-in-out;
   z-index: 13;
   background: url('../images/burguer-1.svg');
@@ -174,6 +174,7 @@ header{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  min-height: 220px;
 }
 
 .frontend-brand{
@@ -196,7 +197,7 @@ header{
     font-size: 28px;
     color: white;
     text-shadow: $text-shadow;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
   }
 }
 
