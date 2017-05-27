@@ -58,24 +58,34 @@ $(document).ready(function() {
       {
         label: "SKILLZ",
         backgroundColor: [
-          'rgba(254, 230, 75, 0.4)'
+          'rgba(254, 230, 76, 0.8)'
         ],
         borderColor: [
-          'rgba(254, 230, 75, 1)'
+          'rgba(254, 230, 76, 1)'
         ],
         borderWidth: 1,
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [6, 9, 7, 8, 7, 6, 7],
       }
     ]
+
   };
   let myRadarChart = new Chart(ctx, {
     type: 'radar',
     data: data,
     options: {
+      legend: {
+          position: "bottom"
+      },
       scale: {
-        reverse: true,
         ticks: {
-          beginAtZero: true
+          beginAtZero: true,
+          min: 0,
+          max: 10,
+          stepSize: 2
+        },
+        pointLabels: {
+          fontSize: 14,
+          fontColor: '797878'
         }
       }
     }

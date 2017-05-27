@@ -112,7 +112,10 @@ a{
   right: 40px;
   transition: all 200ms ease-in-out;
   z-index: 13;
-  color: #8f86dc;
+  background: url('../images/burguer-1.svg');
+  background-size: contain;
+  width: 50px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -373,8 +376,7 @@ header{
 }
 
 .experience-section{
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 120px;
   background-color: $dark-bg;
   background-image: url('../images/experience-top.svg');
   background-size: contain;
@@ -400,22 +402,26 @@ header{
       color: white;
       font-size: 24px;
       font-family: 'avenirBold';
-      margin: 10px 30px 0 0;
+      margin: 30px 30px 0 0;
     }
   }
   .awards-details{
     text-align: left;
     max-width: 400px;
+    p{
+      color: white;
+    }
     .awards-headers{
       color: white;
       font-size: 16px;
+      font-family: 'avenirBold';
       margin-bottom: 0;
     }
   }
 }
 
 .contact-section{
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
   background-image: url('../images/contact-top.svg');
   background-size: contain;
@@ -507,10 +513,11 @@ header{
   margin-right: 15px;
 }
 .g-love{
-  background-image: url('../images/g-love.svg');
+  background-image: url(../images/g-love.svg);
   background-repeat: no-repeat;
-  height:100px;
-  width:100px;
+  background-size: contain;
+  height: 80px;
+  width: 80px;
   display: inline-block;
   margin-left: 15px;
 }
@@ -521,7 +528,8 @@ header{
   width:90px;
   display: inline-block;
   float: right;
-  margin-top: 25px;
+  margin-top: -80px;
+  margin-bottom: 80px;
 }
 .bat-rebus{
   background-image: url('../images/bat-rebus.svg');
@@ -548,7 +556,7 @@ header{
   height:40px;
   width:120px;
   display: inline-block;
-  margin-left: 15px;
+  margin-top: 25px;
 }
 .gallina{
   background-image: url('../images/gallina.svg');
@@ -682,6 +690,9 @@ header{
     p{
       text-align: center;
     }
+    .awards-wrapper {
+      text-align: center;
+    }
   }
   .frontend-brand{
     font-size: 15px;
@@ -710,7 +721,13 @@ header{
       }
     }
   }
-  .planets-rebus{
-
+  .trophy{
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  .burger-container{
+    top: 20px;
+    right: 20px;
   }
 }

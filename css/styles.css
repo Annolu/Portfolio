@@ -35,7 +35,7 @@ h3 {
 p {
   font-family: 'avenirRegular';
   font-size: 16px;
-  color: #aaa; }
+  color: #797878; }
 
 a {
   color: #f56aa1;
@@ -99,7 +99,10 @@ a {
   right: 40px;
   transition: all 200ms ease-in-out;
   z-index: 13;
-  color: #8f86dc;
+  background: url("../images/burguer-1.svg");
+  background-size: contain;
+  width: 50px;
+  height: 40px;
   cursor: pointer; }
 
 .menu-overlayer {
@@ -312,8 +315,7 @@ header {
     display: table; }
 
 .experience-section {
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 120px;
   background-color: #282071;
   background-image: url("../images/experience-top.svg");
   background-size: contain;
@@ -334,17 +336,20 @@ header {
       color: white;
       font-size: 24px;
       font-family: 'avenirBold';
-      margin: 10px 30px 0 0; }
+      margin: 30px 30px 0 0; }
   .experience-section .awards-details {
     text-align: left;
     max-width: 400px; }
+    .experience-section .awards-details p {
+      color: white; }
     .experience-section .awards-details .awards-headers {
       color: white;
       font-size: 16px;
+      font-family: 'avenirBold';
       margin-bottom: 0; }
 
 .contact-section {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
   background-image: url("../images/contact-top.svg");
   background-size: contain;
@@ -420,10 +425,11 @@ header {
   margin-right: 15px; }
 
 .g-love {
-  background-image: url("../images/g-love.svg");
+  background-image: url(../images/g-love.svg);
   background-repeat: no-repeat;
-  height: 100px;
-  width: 100px;
+  background-size: contain;
+  height: 80px;
+  width: 80px;
   display: inline-block;
   margin-left: 15px; }
 
@@ -434,7 +440,8 @@ header {
   width: 90px;
   display: inline-block;
   float: right;
-  margin-top: 25px; }
+  margin-top: -80px;
+  margin-bottom: 80px; }
 
 .bat-rebus {
   background-image: url("../images/bat-rebus.svg");
@@ -461,7 +468,7 @@ header {
   height: 40px;
   width: 120px;
   display: inline-block;
-  margin-left: 15px; }
+  margin-top: 25px; }
 
 .gallina {
   background-image: url("../images/gallina.svg");
@@ -566,6 +573,8 @@ header {
     float: none; }
   .awards-section p {
     text-align: center; }
+  .awards-section .awards-wrapper {
+    text-align: center; }
 
   .frontend-brand {
     font-size: 15px; }
@@ -582,6 +591,15 @@ header {
     padding: 0px 3px; }
   .contact-section .social-media .social-icons {
     width: 45px;
-    height: 45px; } }
+    height: 45px; }
+
+  .trophy {
+    display: block;
+    float: none;
+    margin: 0 auto; }
+
+  .burger-container {
+    top: 20px;
+    right: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
