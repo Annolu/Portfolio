@@ -55,12 +55,10 @@
 
 	function buildStack() {
 		var stackPagesIdxs = getStackPagesIdxs();
-
 		// set z-index, opacity, initial transforms to pages and add class page--inactive to all except the current one
-		for(var i = 0; i < pagesTotal; ++i) {
+		for(var i = 0; i < pagesTotal; i++) {
 			var page = pages[i],
 				posIdx = stackPagesIdxs.indexOf(i);
-
 			if( current !== i ) {
 				classie.add(page, 'page--inactive');
 
@@ -74,19 +72,16 @@
 					page.style.WebkitTransform = 'translate3d(0,35%,-300px)';
 					page.style.transform = 'translate3d(0,35%,-300px)';
 				}
-
 			}
 			else {
 				classie.remove(page, 'page--inactive');
 			}
-
 			page.style.zIndex = i < current ? parseInt(current - i) : parseInt(pagesTotal + current - i);
-
 			if( posIdx !== -1 ) {
 				page.style.opacity = parseFloat(1 - 0.1 * posIdx);
 			}
 			else {
-				page.style.opacity = 0;
+				page.style.opacity = 0.8;
 			}
 		}
 	}
@@ -149,10 +144,15 @@
 
 		// now set the page transforms
 		var stackPagesIdxs = getStackPagesIdxs();
-		for(var i = 0, len = stackPagesIdxs.length; i < len; ++i) {
+		for(var i = 0; i < stackPagesIdxs.length; i++) {
 			var page = pages[stackPagesIdxs[i]];
-			page.style.WebkitTransform = 'translate3d(0, 35%, ' + parseInt(-1 * 200 - 50*i) + 'px)'; // -200px, -230px, -260px
-			page.style.transform = 'translate3d(0, 35%, ' + parseInt(-1 * 200 - 50*i) + 'px)';
+			if(page.id === 'page-augusto'&& current===1){
+				page.style.WebkitTransform = 'translate3d(0, 35%, -200px)';
+				page.style.transform = 'translate3d(0, 35%, -200px)';
+			}else{
+				page.style.WebkitTransform = 'translate3d(0, 35%, ' + parseInt(-1 * 200 - 50*i) + 'px)'; // -200px, -230px, -260px
+				page.style.transform = 'translate3d(0, 35%, ' + parseInt(-1 * 200 - 50*i) + 'px)';
+			}
 		}
 	}
 
@@ -210,6 +210,7 @@
 		if( excludePageIdx != nextStackPageIdx ) {
 			idxs.push(nextStackPageIdx);
 		}
+
 		if( excludePageIdx != nextStackPageIdx_2 ) {
 			idxs.push(nextStackPageIdx_2);
 		}

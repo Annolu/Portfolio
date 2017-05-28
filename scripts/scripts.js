@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   setInterval(hideLoader, 500);
 
-  let burger= $('.burger-container');
+  var burger= $('.burger-container');
 
   burger.click(openMenu);
 
@@ -24,12 +24,12 @@ $(document).ready(function() {
     $('body').toggleClass('no-scroll')
   }
 
-  let ctx = document.getElementById("augusto-chart");
+  var ctx = document.getElementById("augusto-chart");
 
-  let projectsSection= $('.projects-wrapper');
-  let projectsSectionHeight = projectsSection.height();
-  let initHeight = "1050px";
-  let buttonViewMore= $(".buttons");
+  var projectsSection= $('.projects-wrapper');
+  var projectsSectionHeight = projectsSection.height();
+  var initHeight = "1050px";
+  var buttonViewMore= $(".buttons");
 
   projectsSection.css('height', initHeight);
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
     buttonViewMore.css('opacity','0');
   }
 
-  let data = {
+  var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
@@ -77,7 +77,7 @@ $(document).ready(function() {
     ]
   };
 
-  let myRadarChart = new Chart(ctx, {
+  var myRadarChart = new Chart(ctx, {
     type: 'radar',
     data: data,
     options: {
@@ -99,12 +99,12 @@ $(document).ready(function() {
     }
   });
 
-  let modal = $('#myModal');
-  let modalButton = $(".modalButton");
-  let span = $(".close");
+  var modal = $('#myModal');
+  var modalButton = $(".modalButton");
+  var span = $(".close");
 
   $('a[href^="#"]').on('click', function(event) {
-    let target = $(this.getAttribute('href'));
+    var target = $(this.getAttribute('href'));
 
     if(target.length) {
       event.preventDefault();
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
   $(window).click(function(e) {
 
-    let target= $(e.target);
+    var target= $(e.target);
 
     if(target.hasClass("menu-item") || target.hasClass("menu-overlayer")){
       toggleOverlayer();
@@ -139,14 +139,14 @@ $(document).ready(function() {
   })
 
   function fillModal(e){
-    let originalModalInfo= e.target.parentNode.parentNode.parentNode;
-    let modalInfo= $(originalModalInfo).clone();
+    var originalModalInfo= e.target.parentNode.parentNode.parentNode;
+    var modalInfo= $(originalModalInfo).clone();
     $(".modal-content").empty();
     $(".modal-content").append(modalInfo);
   }
 
   function hideLoader(){
-    let loader= $('.loader-overlayer');
+    var loader= $('.loader-overlayer');
     loader.addClass('hide-loader');
   }
 });
