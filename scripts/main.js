@@ -11,7 +11,14 @@
 ;(function(window) {
 
 	'use strict';
-
+	const selectPage = (url) =>{
+		if(url === 'noemi'){
+			return 2;
+		}
+		if(url === 'augusto'){
+			return 1;
+		}
+	}
 	var support = { transitions: Modernizr.csstransitions },
 		// transition end event name
 		transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
@@ -38,7 +45,7 @@
 		// total number of page elements
 		pagesTotal = pages.length,
 		// index of current page
-		current = 1,
+		current = selectPage(window.location.href.split("?").pop()),
 		// menu button
 		menuCtrl = document.querySelector('button.menu-button'),
 		// the navigation wrapper
@@ -48,10 +55,12 @@
 		// check if menu is open
 		isMenuOpen = false;
 
+
 	function init() {
 		buildStack();
 		initEvents();
 	}
+
 
 	function buildStack() {
 		var stackPagesIdxs = getStackPagesIdxs();
@@ -122,16 +131,36 @@
 		} );
 	}
 
+
+
+
+
+
 	// toggle menu fn
 	function toggleMenu() {
 		if( isMenuOpen ) {
 			closeMenu();
+			showBurger();
 		}
 		else {
+			hideBurger();
 			openMenu();
 			isMenuOpen = true;
 		}
 	}
+
+	let burgerAugusto = document.getElementById("burger-augusto");
+	function showBurger(){
+		classie.add(burgerAugusto, 'burger-container--open');
+	}
+	function hideBurger(){
+		classie.remove(burgerAugusto, 'burger-container--open');
+	}
+
+
+
+
+
 
 	// opens the menu
 	function openMenu() {

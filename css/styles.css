@@ -108,7 +108,11 @@ a {
   background-size: contain;
   width: 50px;
   height: 40px;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0; }
+
+.burger-container--open {
+  opacity: 1; }
 
 .menu-overlayer {
   width: 100%;
