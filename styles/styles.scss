@@ -124,9 +124,6 @@ a{
   cursor: pointer;
   opacity:0;
 }
-.burger-container--open{
-  opacity:1;
-}
 
 .menu-overlayer{
   width: 100%;
@@ -677,7 +674,6 @@ header{
     min-height: 275px;
   }
   .header-title-wrapper{
-    padding: 50px 0;
   }
   .planets-rebus{
     top:50px;

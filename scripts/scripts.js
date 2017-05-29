@@ -2,18 +2,14 @@ $(document).ready(function() {
 
   setInterval(hideLoader, 500);
 
-  var burger= $('.burger-container');
+  var burgerAugusto= $('#burger-augusto');
 
-  burger.click(openMenu);
+  burgerAugusto.click(openMenu);
 
   function openMenu() {
-    animateBurger();
+    console.log('fuck you , fuck you hard');
     toggleOverlayer();
     bodyNoScroll();
-  }
-
-  function animateBurger(){
-    burger.toggleClass('open');
   }
 
   function toggleOverlayer() {

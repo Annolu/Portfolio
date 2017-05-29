@@ -12,11 +12,13 @@
 
 	'use strict';
 	const selectPage = (url) =>{
-		if(url === 'noemi'){
-			return 2;
-		}
-		if(url === 'augusto'){
-			return 1;
+		switch(url){
+			case 'augusto':
+			 	return 1;
+			case 'noemi':
+				return 2;
+			default:
+				return 0;
 		}
 	}
 	var support = { transitions: Modernizr.csstransitions },
@@ -54,11 +56,14 @@
 		navItems = [].slice.call(nav.querySelectorAll('.link--page')),
 		// check if menu is open
 		isMenuOpen = false;
+		let burgerAugusto = document.getElementById('burger-augusto'),
+				burgerNoemi = document.getElementById('burger-noemi');
 
 
 	function init() {
 		buildStack();
 		initEvents();
+		checkInitialBurger();
 	}
 
 
@@ -132,38 +137,23 @@
 	}
 
 
-
-
-
-
 	// toggle menu fn
 	function toggleMenu() {
 		if( isMenuOpen ) {
 			closeMenu();
-			showBurger();
 		}
 		else {
-			hideBurger();
 			openMenu();
 			isMenuOpen = true;
 		}
 	}
 
-	let burgerAugusto = document.getElementById("burger-augusto");
-	function showBurger(){
-		classie.add(burgerAugusto, 'burger-container--open');
-	}
-	function hideBurger(){
-		classie.remove(burgerAugusto, 'burger-container--open');
-	}
-
-
-
-
-
 
 	// opens the menu
 	function openMenu() {
+		//hide the burgers augusto y noemi
+		hideBurgerMenus();
+
 		// toggle the menu button
 		classie.add(menuCtrl, 'menu-button--open')
 		// stack gets the class "pages-stack--open" to add the transitions
@@ -191,6 +181,43 @@
 		openPage();
 	}
 
+	const checkInitialBurger = () => {
+		if(current === 1){
+			burgerAugusto.style.opacity = 1;
+			burgerAugusto.style.visibility = 'visible';
+			burgerNoemi.style.opacity = 0;
+			burgerNoemi.style.visibility = 'hidden';
+		}else if (current === 2){
+			burgerNoemi.style.opacity = 1;
+			burgerNoemi.style.visibility = 'visible';
+			burgerAugusto.style.opacity = 0;
+			burgerAugusto.style.visibility = 'hidden';
+		}
+	}
+	const setBurgerMenu = (page) => {
+		switch(page){
+			case 'page-augusto':
+			 	burgerAugusto.style.opacity = 1;
+			 	burgerAugusto.style.visibility = 'visible';
+				burgerNoemi.style.opacity = 0;
+				burgerNoemi.style.visibility = 'hidden';
+
+				break;
+			case 'page-noemi':
+				burgerNoemi.style.opacity = 1;
+				burgerNoemi.style.visibility = 'visible';
+				burgerAugusto.style.opacity = 0;
+				burgerAugusto.style.visibility = 'hidden';
+				break;
+		}
+	}
+
+	const hideBurgerMenus = () => {
+			burgerAugusto.style.opacity = 0;
+			burgerNoemi.style.opacity = 0;
+
+	}
+
 	// opens a page
 	function openPage(id) {
 		var futurePage = id ? document.getElementById(id) : pages[current],
@@ -201,6 +228,10 @@
 		futurePage.style.WebkitTransform = 'translate3d(0, 0, 0)';
 		futurePage.style.transform = 'translate3d(0, 0, 0)';
 		futurePage.style.opacity = 1;
+
+		//set the burger menu para cada uno
+		setBurgerMenu(futurePage.id);
+
 
 		// set transforms for the other items in the stack
 		for(var i = 0, len = stackPagesIdxs.length; i < len; ++i) {
