@@ -506,6 +506,12 @@ header {
   width: 70px;
   float: right; }
 
+.menu-button {
+  height: 20px;
+  width: 100px;
+  background: url("../images/logo-1.svg");
+  background-size: contain; }
+
 #augusto-chart {
   max-height: 450px;
   max-width: 450px; }
@@ -623,6 +629,15 @@ header {
 
   .burger-container {
     top: 20px;
-    right: 20px; } }
+    right: 20px; }
+
+  header {
+    min-height: initial; }
+
+  .header-title-wrapper {
+    width: 100%; }
+
+  .planets-rebus {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

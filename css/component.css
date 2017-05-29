@@ -204,76 +204,22 @@ html.js,
 .menu-button {
 	position: absolute;
 	z-index: 10;
-	bottom: 20px;
-	left: 20px;
-	/*width: 30px;
-	height: 24px;*/
+	bottom: 15px;
+	left: 15px;
 	padding: 0;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	background: transparent;
+	height: 20px;
+  width:100px;
+  background: url('../images/logo-1.svg');
+  background-size: contain;
 }
 
 .no-js .menu-button {
 	display: none;
 }
 
-/*.menu-button::before,
-.menu-button::after,
-.menu-button span {
-	background: #5f656f;
-}
-
-.menu-button::before,
-.menu-button::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	pointer-events: none;
-	-webkit-transition: -webkit-transform 0.25s;
-	transition: transform 0.25s;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-}*/
-
-/*.menu-button span {
-	position: absolute;
-	left: 0;
-	overflow: hidden;
-	width: 100%;
-	height: 2px;
-	text-indent: 200%;
-	-webkit-transition: opacity 0.25s;
-	transition: opacity 0.25s;
-}
-
-.menu-button::before {
-	-webkit-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
-	transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
-}
-
-.menu-button::after {
-	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
-	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
-}
-
-.menu-button--open span {
-	opacity: 0;
-}
-
-.menu-button--open::before {
-	-webkit-transform: rotate3d(0, 0, 1, 45deg);
-	transform: rotate3d(0, 0, 1, 45deg);
-}
-
-.menu-button--open::after {
-	-webkit-transform: rotate3d(0, 0, 1, -45deg);
-	transform: rotate3d(0, 0, 1, -45deg);
-}*/
 
 @media screen and (max-width: 60em) {
 	.info {
@@ -305,7 +251,7 @@ html.js,
 @media screen and (max-width: 40em) {
 	.js .pages-nav {
 		display: block;
-		padding: 10px 20px 0 20px;
+		padding: 20px 20px 0 10%;
 		text-align: left;
 	}
 	.js .pages-nav__item {

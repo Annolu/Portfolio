@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  setInterval(hideLoader, 500);
+  setInterval(hideLoader, 200);
 
   var burgerAugusto= $('#burger-augusto');
 
