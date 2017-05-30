@@ -2,58 +2,79 @@ $(document).ready(function() {
 
   setInterval(hideLoader, 200);
 
-  var burgerAugusto= $('#burger-augusto');
+  var burger= $('.burger-container');
+  var event;
+  burger.bind('click', { param: event }, openMenu)
 
-  burgerAugusto.click(openMenu);
-
-  function openMenu() {
-    console.log('fuck you , fuck you hard');
-    toggleOverlayer();
+  function openMenu(event) {
+    var targetBurger= $(event.target);
+    toggleOverlayer(targetBurger);
     bodyNoScroll();
   }
 
-  function toggleOverlayer() {
-    $('.menu-overlayer').toggleClass('open');
+  function toggleOverlayer(target) {
+
+    if(target.filter('.augusto', '.menu-item')){
+      $('.menu-overlayer.augusto').toggleClass('open');
+    }else if(target.filter('.noemi', '.menu-item')){
+      $('.menu-overlayer.noemi').toggleClass('open');
+    }
   }
 
   function bodyNoScroll() {
     $('body').toggleClass('no-scroll')
   }
 
-  var ctx = document.getElementById("augusto-chart");
+  var ctxA = document.getElementById("augusto-chart");
 
-  var projectsSection= $('.projects-wrapper');
+  var ctxN = document.getElementById("noemi-chart");
+
+  var projectsSection=$('.projects-wrapper');
   var projectsSectionHeight = projectsSection.height();
   var initHeight = "1050px";
   var buttonViewMore= $(".buttons");
 
   projectsSection.css('height', initHeight);
 
-
-  buttonViewMore.click(loadMoreWorks);
+  buttonViewMore.click(showWorkLoader);
 
   //show loader in work-button, for 800ms only
-  function loadMoreWorks(){
+  function showWorkLoader(e){
+    var target= $(e.target);
     $('.work-loader-wrapper').css('transform','rotateX(0deg)');
-    setTimeout(showWorkLoader, 800);
+    setTimeout(showMoreWorks, 800, target);
   }
 
-  function showWorkLoader(){
+  function showMoreWorks(target){
     //hide loader in work-button
     $('.work-loader-wrapper').css('transform','rotateX(90deg)');
-    //if the button is clicked for the first time and there are more than 8 projects (2100px), show 4 more projects
-    if(projectsSection.css('height') == initHeight && projectsSectionHeight > 2100){
-      projectsSection.css('height', "2100px")
+
+    if (target.hasClass('augusto')){
+      var projectsSectionAugs= $('.projects-wrapper.augusto');
+      extendSection(projectsSectionAugs, target)
     }else{
-    //if the button is clicked for a second time and there are no more projects to show, the button disappears
-      projectsSection.css('height', projectsSectionHeight+"px")
-      setTimeout(hideWorkButton, 200);
+      var projectsSectionNoe= $('.projects-wrapper.noemi');
+      extendSection(projectsSectionNoe, target)
     }
   }
 
-  function hideWorkButton() {
-    buttonViewMore.css({'display':'none'});
-    buttonViewMore.css('opacity','0');
+  function extendSection(sectionToOpen, target){
+    //if the button is clicked for the first time and there are more than 8 projects (equal to 2100px), show 4 more projects
+    if(sectionToOpen.css('height') == initHeight && projectsSectionHeight > 2100){
+      sectionToOpen.css('height', "2100px")
+    }else{
+    //if the button is clicked again and there are no more projects to show, the button disappears
+      sectionToOpen.css('height', projectsSectionHeight+"px")
+      setTimeout(hideWorkButton, 200, target);
+    }
+  }
+
+  function hideWorkButton(target) {
+    if (target.hasClass('augusto')){
+      target.css({'display':'none', 'opacity': '0'});
+    }else{
+      target.css({'display':'none', 'opacity': '0'});
+    }
   }
 
   var data = {
@@ -73,7 +94,29 @@ $(document).ready(function() {
     ]
   };
 
-  var myRadarChart = new Chart(ctx, {
+  var chartAugusto = new Chart(ctxA, {
+    type: 'radar',
+    data: data,
+    options: {
+      legend: {
+          position: "bottom"
+      },
+      scale: {
+        ticks: {
+          beginAtZero: true,
+          min: 0,
+          max: 10,
+          stepSize: 2
+        },
+        pointLabels: {
+          fontSize: 14,
+          fontColor: '797878'
+        }
+      }
+    }
+  });
+
+  var chartNoemi = new Chart(ctxN, {
     type: 'radar',
     data: data,
     options: {
@@ -108,6 +151,10 @@ $(document).ready(function() {
       $('#page-augusto').stop().animate({
         scrollTop: target[0].offsetTop
       }, 900);
+
+      $('#page-noemi').stop().animate({
+        scrollTop: target[0].offsetTop
+      }, 900);
     }
   });
 
@@ -126,7 +173,7 @@ $(document).ready(function() {
     var target= $(e.target);
 
     if(target.hasClass("menu-item") || target.hasClass("menu-overlayer")){
-      toggleOverlayer();
+      toggleOverlayer(target);
     }
 
     if (e.target == modal[0]) {

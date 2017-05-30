@@ -32,23 +32,30 @@
 	</div>
 
 	<!-- augusto menu  -->
-	<div class="menu-overlayer" id="menuOverlayer">
+	<div class="menu-overlayer augusto">
 		<div class="menu-item-wrapper">
 			<ul>
-				<li class="item-1"><a class="menu-item" href="#work">work</a></li>
-				<li class="item-2"><a class="menu-item" href="#about">about</a></li>
-				<li class="item-3"><a class="menu-item" href="#experience">experience</a></li>
-				<li class="item-4"><a class="menu-item" href="#contact">contact</a></li>
+				<li class="item-1"><a class="menu-item" href="#work-augs">work</a></li>
+				<li class="item-2"><a class="menu-item" href="#about-augs">about</a></li>
+				<li class="item-3"><a class="menu-item" href="#experience-augs">experience</a></li>
+				<li class="item-4"><a class="menu-item" href="#contact-augs">contact</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class="burger-container" id="burger-augusto"></div>
+	<div class="burger-container augusto" id="burger-augusto"></div>
 
-	<!-- augusto menu  -->
-
-	<div class="burger-container" id="burger-noemi"></div>
-
-
+	<!-- noemi menu  -->
+	<div class="menu-overlayer noemi">
+		<div class="menu-item-wrapper">
+			<ul>
+				<li class="item-1"><a class="menu-item" href="#work-noe">work</a></li>
+				<li class="item-2"><a class="menu-item" href="#about-noe">about</a></li>
+				<li class="item-3"><a class="menu-item" href="#experience-noe">experience</a></li>
+				<li class="item-4"><a class="menu-item" href="#contact-noe">contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="burger-container noemi" id="burger-noemi"></div>
 
 	<!-- navigation -->
 	<nav class="pages-nav">
@@ -87,7 +94,7 @@
 						<div class="planets-rebus"></div>
           </div>
         </header>
-        <div class="work-section" id="work">
+        <div class="work-section" id="work-augs">
           <div class="central-panel">
             <div class="sections-title">
                 <div class="content">
@@ -99,7 +106,7 @@
                 </div>
 								<div class="abeja"></div>
             </div>
-						<div class="projects-wrapper">
+						<div class="projects-wrapper augusto">
 							<div class="projects projects-left">
 								<div class="project-thumbnail">
 								</div>
@@ -214,8 +221,8 @@
           </div>
         </div>
         <div>
-	        <div class="central-panel centre-button">
-	          <span class="buttons">
+	        <div class="central-panel">
+	          <span class="buttons augusto">
 							<a href="#">Load more works</a>
 							<div class="work-loader-wrapper">
 								<span class="work-loader"></span>
@@ -223,7 +230,7 @@
 						</span>
 	        </div>
         </div>
-        <div class="about-section" id="about">
+        <div class="about-section" id="about-augs">
           <div class="central-panel">
 						<div class="g-love"></div>
             <div class="sections-title">
@@ -255,7 +262,7 @@
 
           </div>
         </div>
-        <div class="experience-section" id="experience">
+        <div class="experience-section" id="experience-augs">
           <div class="central-panel">
 						<div class="face-rebus"></div>
             <div class="sections-title">
@@ -308,7 +315,7 @@
 						<div class="green-rebus"></div>
           </div>
         </div>
-        <div class="contact-section" id="contact">
+        <div class="contact-section" id="contact-augs">
           <div class="central-panel">
             <div class="sections-title">
                 <div class="content">
@@ -352,7 +359,7 @@
 						<div class="planets-rebus"></div>
           </div>
         </header>
-        <div class="work-section">
+        <div class="work-section" id="work-noe">
           <div class="central-panel">
             <div class="sections-title">
                 <div class="content">
@@ -364,7 +371,7 @@
                 </div>
 								<div class="abeja"></div>
             </div>
-						<div class="projects-wrapper">
+						<div class="projects-wrapper noemi">
 							<div class="projects projects-left">
 								<div class="project-thumbnail">
 								</div>
@@ -478,13 +485,19 @@
 						</div>
           </div>
         </div>
-        <div>
-          <div class="central-panel centre-button">
-            <a class="buttons" href="#">Load more works</a>
-          </div>
+				<div>
+	        <div class="central-panel">
+	          <span class="buttons noemi">
+							<a href="#">Load more works</a>
+							<div class="work-loader-wrapper">
+								<span class="work-loader"></span>
+							</div>
+						</span>
+	        </div>
         </div>
-        <div class="about-section">
+        <div class="about-section" id="about-noe">
           <div class="central-panel">
+						<div class="g-love"></div>
             <div class="sections-title">
                 <div class="content">
                   <div class="pre-title">
@@ -503,17 +516,19 @@
         <div class="awards-section">
           <div class="central-panel">
             <div class="sections skills-chart">
+							<canvas id="noemi-chart" width="400" height="400"></canvas>
             </div>
             <div class="sections awards-wrapper">
-              <h2 class="title">awards</h2>
+							<div class="trophy"></div><h2 class="title">awards / skills</h2>
               <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
               <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
               <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus Curabitur ullamcorper.</p>
             </div>
           </div>
         </div>
-        <div class="experience-section">
+        <div class="experience-section" id="experience-noe">
           <div class="central-panel">
+						<div class="face-rebus"></div>
             <div class="sections-title">
                 <div class="content">
                   <div class="pre-title">
@@ -561,9 +576,10 @@
                 </div>
               </div>
             </div>
+						<div class="green-rebus"></div>
           </div>
         </div>
-        <div class="contact-section">
+        <div class="contact-section" id="contact-noe">
           <div class="central-panel">
             <div class="sections-title">
                 <div class="content">
@@ -587,7 +603,8 @@
         </div>
 				<div class="footer-section">
 					<div class="central-panel">
-						<p class="frontend-brand">Front End Developer/UX Designer</p>
+						<div class="flight-rebus"></div>
+						<p>Rebus.io 2017 © ✌</p>
 					</div>
 				</div>
       </div>
