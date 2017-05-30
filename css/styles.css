@@ -65,7 +65,7 @@ a {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #282071;
+  background-color: #1d1e21;
   z-index: 14;
   transition: all 200ms ease;
   display: -webkit-flex;
@@ -570,6 +570,75 @@ header {
     text-decoration: none;
     cursor: pointer; }
 
+.page-rebus {
+  background: #281556;
+  background: -moz-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #281556), color-stop(30%, #281556), color-stop(71%, #433b8b), color-stop(100%, #433b8b));
+  background: -webkit-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
+  background: -o-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
+  background: -ms-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
+  background: linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281556', endColorstr='#433b8b', GradientType=1 ); }
+  .page-rebus .page-rebus-frame {
+    width: 96%;
+    height: 78%;
+    margin: 2% 2% 0 2%;
+    border: 1px solid #8F86DD; }
+    .page-rebus .page-rebus-frame .big-logo {
+      background: url("../images/rebus-big-logo.svg") no-repeat;
+      width: 50%;
+      height: 20%;
+      margin: 10% auto 2% auto;
+      background-size: contain; }
+    .page-rebus .page-rebus-frame .page-rebus-quote {
+      height: 110px; }
+      .page-rebus .page-rebus-frame .page-rebus-quote .quote {
+        color: white;
+        width: 60%;
+        text-align: center;
+        font-size: 1.6rem;
+        font-style: italic;
+        margin-left: 20%;
+        position: absolute;
+        padding: 30px; }
+      .page-rebus .page-rebus-frame .page-rebus-quote .quote-left {
+        background-image: url("../images/quote-left.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 122px;
+        height: 100px;
+        position: absolute;
+        margin-left: 20%; }
+      .page-rebus .page-rebus-frame .page-rebus-quote .quote-right {
+        background-image: url("../images/quote-right.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 122px;
+        height: 100px;
+        position: absolute;
+        right: 0;
+        margin-right: 20%;
+        margin-top: 50px; }
+    .page-rebus .page-rebus-frame .page-rebus-sign {
+      font-family: 'avenirHeavy';
+      color: rgba(255, 255, 255, 0.1);
+      font-size: 2rem;
+      text-align: center;
+      width: 250px;
+      margin: 25px auto 0 auto;
+      padding-top: 25px;
+      border-top: 1px solid #8F86DD; }
+  .page-rebus .rebus-page-footer {
+    width: 64%;
+    height: 20%;
+    background-image: url(../images/rebus-page-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    bottom: 0;
+    position: absolute;
+    right: 0; }
+
 @media only screen and (min-width: 1300px) {
   header {
     min-height: 275px; }
@@ -579,10 +648,28 @@ header {
 
   .planets-rebus {
     top: 50px; } }
+@media only screen and (max-width: 1100px) {
+  .page-rebus .page-rebus-frame .big-logo {
+    width: 80%; } }
 @media only screen and (max-width: 880px) {
   .central-panel {
-    width: 90%; } }
+    width: 90%; }
+
+  .page-rebus .page-rebus-frame .page-rebus-quote .quote-left {
+    margin-left: 10%;
+    width: 80px; }
+  .page-rebus .page-rebus-frame .page-rebus-quote .quote {
+    width: 80%;
+    margin-left: 10%; }
+  .page-rebus .page-rebus-frame .page-rebus-quote .quote-right {
+    margin-right: 10%;
+    width: 80px; } }
 @media only screen and (max-width: 580px) {
+  .page-rebus .page-rebus-frame .page-rebus-quote .quote {
+    font-size: 1.2rem; }
+  .page-rebus .page-rebus-frame .big-logo {
+    height: 13%; }
+
   h1 {
     font-size: 45px; }
 
