@@ -100,8 +100,8 @@ a {
 .burger-container {
   position: fixed !important;
   display: inline-block;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
   transition: all 200ms ease-in-out;
   z-index: 13;
   background: url("../images/burguer-1.svg");
@@ -177,7 +177,7 @@ header {
   margin: 0 0 20px 0; }
 
 .header-title-wrapper {
-  padding: 30px 0px 25px 20px;
+  padding: 20px 0 20px 0;
   width: 60%; }
   .header-title-wrapper .header-title {
     color: white;
@@ -336,7 +336,7 @@ header {
     display: table; }
 
 .experience-section {
-  padding-top: 120px;
+  padding-top: 100px;
   background-color: #282071;
   background-image: url("../images/experience-top.svg");
   background-size: contain;
@@ -571,6 +571,7 @@ header {
     cursor: pointer; }
 
 .page-rebus {
+  padding: 20px;
   background: #281556;
   background: -moz-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #281556), color-stop(30%, #281556), color-stop(71%, #433b8b), color-stop(100%, #433b8b));
@@ -580,9 +581,7 @@ header {
   background: linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281556', endColorstr='#433b8b', GradientType=1 ); }
   .page-rebus .page-rebus-frame {
-    width: 96%;
-    height: 78%;
-    margin: 2% 2% 0 2%;
+    height: 75%;
     border: 1px solid #8F86DD; }
     .page-rebus .page-rebus-frame .big-logo {
       background: url("../images/rebus-big-logo.svg") no-repeat;
@@ -648,12 +647,15 @@ header {
 
   .planets-rebus {
     top: 50px; } }
-@media only screen and (max-width: 1100px) {
-  .page-rebus .page-rebus-frame .big-logo {
-    width: 80%; } }
 @media only screen and (max-width: 880px) {
+  .header-title-wrapper {
+    width: 100%; }
+
   .central-panel {
     width: 90%; }
+
+  header {
+    min-height: 0; }
 
   .page-rebus .page-rebus-frame .page-rebus-quote .quote-left {
     margin-left: 10%;
@@ -663,31 +665,43 @@ header {
     margin-left: 10%; }
   .page-rebus .page-rebus-frame .page-rebus-quote .quote-right {
     margin-right: 10%;
-    width: 80px; } }
+    width: 80px; }
+
+  .planets-rebus {
+    display: none; } }
 @media only screen and (max-width: 580px) {
   .page-rebus .page-rebus-frame .page-rebus-quote .quote {
     font-size: 1.2rem; }
   .page-rebus .page-rebus-frame .big-logo {
-    height: 13%; }
+    width: 80%;
+    height: 13%;
+    margin: 25px auto; }
 
   h1 {
-    font-size: 45px; }
+    font-size: 35px; }
 
-  .experience-section .awards > div {
-    width: 100%;
-    text-align: left; }
-  .experience-section .awards-dates p {
-    margin: 0; }
-  .experience-section .awards {
-    padding-top: 35px; }
+  .experience-section {
+    padding-top: 40px; }
+    .experience-section .awards > div {
+      width: 100%;
+      text-align: left; }
+    .experience-section .awards-dates p {
+      margin: 0; }
+    .experience-section .awards {
+      padding-top: 35px; }
 
-  .awards-section .sections {
-    width: 100%;
-    float: none; }
-  .awards-section p {
-    text-align: center; }
-  .awards-section .awards-wrapper {
-    text-align: center; }
+  .g-love {
+    position: absolute; }
+
+  .awards-section {
+    padding-top: 75px; }
+    .awards-section .sections {
+      width: 100%;
+      float: none; }
+    .awards-section p {
+      text-align: center; }
+    .awards-section .awards-wrapper {
+      text-align: center; }
 
   .frontend-brand {
     font-size: 15px; }
@@ -700,11 +714,14 @@ header {
     .projects .project-info h3 {
       margin-top: 15px; }
 
-  .contact-section .social-media li {
-    padding: 0px 3px; }
-  .contact-section .social-media .social-icons {
-    width: 45px;
-    height: 45px; }
+  .contact-section {
+    padding-top: 70px;
+    padding-bottom: 40px; }
+    .contact-section .social-media li {
+      padding: 0px 3px; }
+    .contact-section .social-media .social-icons {
+      width: 45px;
+      height: 45px; }
 
   .trophy {
     display: block;
@@ -712,7 +729,17 @@ header {
     margin: 0 auto; }
 
   .burger-container {
-    top: 20px;
-    right: 20px; } }
+    top: 10px;
+    right: 10px; }
+
+  .header-title-wrapper {
+    padding: 15px 0 10px 0; }
+    .header-title-wrapper .header-title {
+      font-size: 30px; }
+    .header-title-wrapper .header-subtitle {
+      font-size: 20px; }
+
+  .sections-title .content {
+    margin: 15px 0 0 0; } }
 
 /*# sourceMappingURL=styles.css.map */

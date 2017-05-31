@@ -192,6 +192,8 @@
 			burgerNoemi.style.visibility = 'visible';
 			burgerAugusto.style.opacity = 0;
 			burgerAugusto.style.visibility = 'hidden';
+		}else{
+			hideBurgerMenus();
 		}
 	}
 	const setBurgerMenu = (page) => {
