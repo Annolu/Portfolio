@@ -428,6 +428,14 @@ header {
   height: 70px;
   width: 300px; }
 
+.planets-shadow {
+  background-image: url("../images/planets-shadow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 305px;
+  margin: 5% auto; }
+
 .abeja {
   background-image: url("../images/abeja.svg");
   background-repeat: no-repeat;
@@ -571,7 +579,7 @@ header {
     cursor: pointer; }
 
 .page-rebus {
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
   background: #281556;
   background: -moz-linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #281556), color-stop(30%, #281556), color-stop(71%, #433b8b), color-stop(100%, #433b8b));
@@ -581,14 +589,15 @@ header {
   background: linear-gradient(45deg, #281556 0%, #281556 30%, #433b8b 71%, #433b8b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281556', endColorstr='#433b8b', GradientType=1 ); }
   .page-rebus .page-rebus-frame {
-    height: 75%;
-    border: 1px solid #8F86DD; }
+    border: 1px solid #8F86DD;
+    height: 100%;
+    padding-top: 5%; }
     .page-rebus .page-rebus-frame .big-logo {
-      background: url("../images/rebus-big-logo.svg") no-repeat;
-      width: 50%;
-      height: 20%;
-      margin: 10% auto 2% auto;
-      background-size: contain; }
+      background: url(../images/rebus-big-logo.svg) no-repeat;
+      width: 57%;
+      background-size: contain;
+      height: 175px;
+      margin: 0 auto; }
     .page-rebus .page-rebus-frame .page-rebus-quote {
       height: 110px; }
       .page-rebus .page-rebus-frame .page-rebus-quote .quote {
@@ -657,12 +666,14 @@ header {
   header {
     min-height: 0; }
 
+  .page-rebus .page-rebus-frame .big-logo {
+    height: 100px; }
   .page-rebus .page-rebus-frame .page-rebus-quote .quote-left {
     margin-left: 10%;
     width: 80px; }
   .page-rebus .page-rebus-frame .page-rebus-quote .quote {
     width: 80%;
-    margin-left: 10%; }
+    margin-left: 5%; }
   .page-rebus .page-rebus-frame .page-rebus-quote .quote-right {
     margin-right: 10%;
     width: 80px; }
@@ -673,9 +684,9 @@ header {
   .page-rebus .page-rebus-frame .page-rebus-quote .quote {
     font-size: 1.2rem; }
   .page-rebus .page-rebus-frame .big-logo {
-    width: 80%;
-    height: 13%;
-    margin: 25px auto; }
+    width: 85%;
+    background-size: contain;
+    height: 65px; }
 
   h1 {
     font-size: 35px; }
@@ -738,6 +749,10 @@ header {
       font-size: 30px; }
     .header-title-wrapper .header-subtitle {
       font-size: 20px; }
+
+  .planets-shadow {
+    height: 50px;
+    width: 150px; }
 
   .sections-title .content {
     margin: 15px 0 0 0; } }
