@@ -165,7 +165,7 @@ a {
   top: 20px;
   right: 20px;
   transition: all 200ms ease-in-out;
-  z-index: 13;
+  z-index: 10;
   background: url("../images/burguer-1.svg");
   background-size: contain;
   width: 50px;
@@ -225,7 +225,7 @@ a {
       transform: rotateX(0deg); }
 
 header {
-  background-color: #1d1e21;
+  background-color: #282071;
   background-image: url("../images/header-bkg-new-sky.svg");
   background-size: contain;
   background-repeat: no-repeat;
