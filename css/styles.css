@@ -636,8 +636,8 @@ header {
       margin: 25px auto 0 auto;
       padding-top: 25px;
       border-top: 1px solid #8F86DD; }
-  .page-rebus .rebus-page-footer {
-    width: 64%;
+  .page-rebus .page-rebus-footer {
+    width: 60%;
     height: 20%;
     background-image: url(../images/rebus-page-bottom.svg);
     background-size: contain;
@@ -751,8 +751,7 @@ header {
       font-size: 20px; }
 
   .planets-shadow {
-    height: 50px;
-    width: 150px; }
+    width: 220px; }
 
   .sections-title .content {
     margin: 15px 0 0 0; } }
