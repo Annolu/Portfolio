@@ -41,7 +41,7 @@ a{
   color: $font-pink;
   font-family: 'avenirBold';
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .no-scroll{
@@ -235,10 +235,11 @@ header{
     h3{
       margin-top: 0;
       color: $font-dark;
+      margin-bottom: 10px;
     }
-    a{
-      text-decoration: underline;
-    }
+    // a{
+    //   text-decoration: underline;
+    // }
   }
   &.projects-left{
     >div{
@@ -260,19 +261,18 @@ header{
 .buttons{
   margin: 30px auto;
   display: block;
-  border: 2px solid $font-pink;
+  border: 1px solid #f56aa1;
   border-radius: 2px;
   transition: all 200ms ease;
-  text-decoration: none;
   cursor: pointer;
-  width: 250px;
-  height: 53px;
+  width: 200px;
+  height: 45px;
   position: relative;
   opacity: 1;
   text-align: center;
   a{
     transition: all 200ms ease;
-    margin-top: 17px;
+    margin-top: 15px;
     display: block;
   }
   &:hover{
@@ -281,6 +281,34 @@ header{
       color: white;
       pointer-events: none;
     }
+  }
+}
+
+.work-buttons-section{
+  .icons-buttons{
+    display: inline-block;
+    padding: 7px 7px 4px 7px;
+    font-size: 14px;
+    margin-right: 5px;
+    border: 1px solid #f56aa1;
+    font-family: 'avenirRegular';
+    text-transform: capitalize;
+    text-align: center;
+    min-width: 77px;
+    &:hover{
+      background-color: $font-pink;
+      color: white;
+    }
+  }
+  .github-icon{
+    color: #1d1e21;
+    border-color: #1d1e21;
+    &:hover{
+      background-color: #1d1e21;
+    }
+  }
+  i{
+    margin: 0 4px;
   }
 }
 
@@ -303,13 +331,13 @@ header{
   .work-loader{
     display: inline-block;
     box-sizing: border-box;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    background-color: $font-pink;
-    top: 6px;
+    background-color: #f56aa1;
+    top: 7px;
     position: relative;
-    box-shadow: 0px -12px 0px 13px white inset;
+    box-shadow: 0px -10px 0px 11px white inset;
     animation: rotate .8s infinite ease;
   }
 }
@@ -879,6 +907,9 @@ header{
       padding: 0;
       h3{
         margin-top: 15px;
+      }
+      .info-wrapper{
+        text-align: left;
       }
     }
   }
