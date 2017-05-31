@@ -11,7 +11,7 @@
 ;(function(window) {
 
 	'use strict';
-	const selectPage = (url) =>{
+	function selectPage(url){
 		switch(url){
 			case 'augusto':
 			 	return 1;
@@ -56,7 +56,7 @@
 		navItems = [].slice.call(nav.querySelectorAll('.link--page')),
 		// check if menu is open
 		isMenuOpen = false;
-		let burgerAugusto = document.getElementById('burger-augusto'),
+		var burgerAugusto = document.getElementById('burger-augusto'),
 				burgerNoemi = document.getElementById('burger-noemi');
 
 
@@ -181,7 +181,7 @@
 		openPage();
 	}
 
-	const checkInitialBurger = () => {
+	function checkInitialBurger(){
 		if(current === 1){
 			burgerAugusto.style.opacity = 1;
 			burgerAugusto.style.visibility = 'visible';
@@ -196,7 +196,7 @@
 			hideBurgerMenus();
 		}
 	}
-	const setBurgerMenu = (page) => {
+	function setBurgerMenu(page){
 		switch(page){
 			case 'page-augusto':
 			 	burgerAugusto.style.opacity = 1;
@@ -214,7 +214,7 @@
 		}
 	}
 
-	const hideBurgerMenus = () => {
+	function hideBurgerMenus(){
 			burgerAugusto.style.opacity = 0;
 			burgerNoemi.style.opacity = 0;
 
