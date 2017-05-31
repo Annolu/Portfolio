@@ -198,27 +198,6 @@ html.js,
 	max-height: 80%;
 }
 
-/* Menu button */
-
-.menu-button {
-	position: fixed;
-	z-index: 10;
-	bottom: 15px;
-	left: 15px;
-	padding: 0;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	height: 20px;
-  width:100px;
-  background: url('../images/logo-1.svg');
-  background-size: contain;
-}
-
-.no-js .menu-button {
-	display: none;
-}
-
 
 @media screen and (max-width: 60em) {
 	.info {

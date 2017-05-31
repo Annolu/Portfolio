@@ -31,7 +31,25 @@ $(document).ready(function() {
 
   var projectsSection=$('.projects-wrapper');
   var projectsSectionHeight = projectsSection.height();
-  var initHeight = "1050px";
+  var initHeight;
+
+  $(window).resize(function() {
+    resizeWorkSection()
+  })
+
+  resizeWorkSection()
+
+  function resizeWorkSection(){
+
+    if($( window ).width()<580){
+      initHeight= "1200px";
+    }else{
+      initHeight= "1050px";
+    }
+    projectsSection.css('height', initHeight);
+  }
+
+
   var buttonViewMore= $(".buttons");
 
   projectsSection.css('height', initHeight);

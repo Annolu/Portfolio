@@ -61,6 +61,68 @@ a {
   width: 70%;
   margin: 0 auto; }
 
+/* Menu button */
+.menu-button {
+  position: fixed;
+  z-index: 10;
+  bottom: 15px;
+  left: 15px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 100px;
+  background: url("../images/logo-1.svg");
+  background-size: contain; }
+
+.draw::before,
+.draw::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.draw {
+  transition: color 0.25s;
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  left: 8px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+  width: 115px; }
+  .draw::before, .draw::after {
+    border: 1px solid transparent;
+    transition: all 500ms ease-in;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: white; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #8F86DD;
+    border-right-color: #8F86DD;
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
+  .draw:hover::after {
+    border-bottom-color: #8F86DD;
+    border-left-color: #8F86DD;
+    transition: border-color 0s ease-out 0.3s, width 0.15s ease-out 0.3s, height 0.15s ease-out 0.5s; }
+
+.no-js .menu-button {
+  display: none; }
+
 .loader-overlayer {
   position: fixed;
   height: 100%;
@@ -201,11 +263,15 @@ header {
   .projects .project-thumbnail {
     height: 100px;
     width: 40%;
-    background-color: #ccc;
-    height: 200px; }
+    background: url("../images/browser.svg");
+    background-size: cover;
+    height: 200px;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
   .projects .project-info {
-    width: 55%;
-    padding: 0 15px; }
+    width: 52%;
+    padding: 5% 15px 0 15px; }
     .projects .project-info h3 {
       margin-top: 0;
       color: #111;
@@ -250,7 +316,8 @@ header {
   font-family: 'avenirRegular';
   text-transform: capitalize;
   text-align: center;
-  min-width: 77px; }
+  min-width: 77px;
+  transition: all 200ms ease; }
   .work-buttons-section .icons-buttons:hover {
     background-color: #f56aa1;
     color: white; }
@@ -656,7 +723,7 @@ header {
       padding-top: 25px;
       border-top: 1px solid #8F86DD; }
   .page-rebus .page-rebus-footer {
-    width: 60%;
+    width: 50%;
     height: 20%;
     background-image: url(../images/rebus-page-bottom.svg);
     background-size: contain;
@@ -698,6 +765,12 @@ header {
     width: 80px; }
 
   .planets-rebus {
+    display: none; }
+
+  .projects .project-thumbnail {
+    width: 48%; } }
+@media only screen and (max-height: 680px) and (min-width: 900px) {
+  .page-rebus .planets-shadow {
     display: none; } }
 @media only screen and (max-width: 580px) {
   .page-rebus .page-rebus-frame .page-rebus-quote .quote {

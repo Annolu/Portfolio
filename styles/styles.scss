@@ -65,11 +65,104 @@ a{
   margin: 0 auto;
 }
 
+/* Menu button */
+
+.menu-button {
+	position: fixed;
+	z-index: 10;
+	bottom: 15px;
+	left: 15px;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	height: 20px;
+  width:100px;
+  background: url('../images/logo-1.svg');
+  background-size: contain;
+}
+
+
+.draw::before,
+.draw::after {
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.draw {
+    transition: color 0.25s;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    left: 8px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    height: 30px;
+    width: 115px;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 1px solid transparent;
+    transition: all 500ms ease-in;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: #8F86DD; // Make borders visible
+    border-right-color: #8F86DD;
+    transition:
+      width 0.15s ease-out, // Width expands first
+      height 0.15s ease-out 0.15s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: #8F86DD; // Make borders visible
+    border-left-color: #8F86DD;
+    transition:
+      border-color 0s ease-out 0.3s, // Wait for ::before to finish before showing border
+      width 0.15s ease-out 0.3s, // And then exanding width
+      height 0.15s ease-out 0.5s; // And finally height
+  }
+}
+
+.no-js .menu-button {
+	display: none;
+}
+
 .loader-overlayer{
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color:#1d1e21;
+  background-color:$dark-bg;
   z-index: 14;
   transition: all 200ms ease;
   display: -webkit-flex;
@@ -156,7 +249,7 @@ a{
   }
   .menu-item{
     display: block;
-    background-color: $dark-bg;
+    background-color: $purple-bg;
     text-align: center;
     margin: 10px 0;
     padding: 20px 0 15px;
@@ -179,7 +272,7 @@ a{
 }
 
 header{
-  background-color: $dark-bg;
+  background-color: $purple-bg;
   background-image: url('../images/header-bkg.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -226,20 +319,21 @@ header{
   .project-thumbnail{
     height: 100px;
     width: 40%;
-    background-color: #ccc;
+    background: url('../images/browser.svg');
+    background-size: cover;
     height: 200px;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
   }
   .project-info{
-    width: 55%;
-    padding: 0 15px;
+    width: 52%;
+    padding: 5% 15px 0 15px;
     h3{
       margin-top: 0;
       color: $font-dark;
       margin-bottom: 10px;
     }
-    // a{
-    //   text-decoration: underline;
-    // }
   }
   &.projects-left{
     >div{
@@ -261,7 +355,7 @@ header{
 .buttons{
   margin: 30px auto;
   display: block;
-  border: 1px solid #f56aa1;
+  border: 1px solid $font-pink;
   border-radius: 2px;
   transition: all 200ms ease;
   cursor: pointer;
@@ -290,21 +384,22 @@ header{
     padding: 7px 7px 4px 7px;
     font-size: 14px;
     margin-right: 5px;
-    border: 1px solid #f56aa1;
+    border: 1px solid $font-pink;
     font-family: 'avenirRegular';
     text-transform: capitalize;
     text-align: center;
     min-width: 77px;
+    transition: all 200ms ease;
     &:hover{
       background-color: $font-pink;
       color: white;
     }
   }
   .github-icon{
-    color: #1d1e21;
-    border-color: #1d1e21;
+    color: $dark-bg;
+    border-color: $dark-bg;
     &:hover{
-      background-color: #1d1e21;
+      background-color: $dark-bg;
     }
   }
   i{
@@ -334,7 +429,7 @@ header{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: #f56aa1;
+    background-color: $font-pink;
     top: 7px;
     position: relative;
     box-shadow: 0px -10px 0px 11px white inset;
@@ -429,7 +524,7 @@ header{
 
 .experience-section{
   padding-top: 100px;
-  background-color: $dark-bg;
+  background-color: $purple-bg;
   background-image: url('../images/experience-top.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -772,7 +867,7 @@ header{
     }
   }
   .page-rebus-footer{
-    width: 60%;
+    width: 50%;
     height: 20%;
     background-image: url(../images/rebus-page-bottom.svg);
     background-size: contain;
@@ -839,16 +934,29 @@ header{
   .planets-rebus{
     display:none;
   }
+  .projects{
+    .project-thumbnail{
+      width: 48%;
+    }
+  }
+}
+
+@media only screen and (max-height: 680px) and (min-width: 900px) {
+  .page-rebus {
+    .planets-shadow{
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width: 580px) {
+
   .page-rebus {
     .page-rebus-frame{
       .page-rebus-quote{
         .quote{
           font-size: 1.2rem;
         }
-
       }
       .big-logo{
         width: 85%;
