@@ -13,9 +13,9 @@
 	'use strict';
 	function selectPage(url){
 		switch(url){
-			case 'augusto':
+			case 'kate':
 			 	return 1;
-			case 'noemi':
+			case 'john':
 				return 2;
 			default:
 				return 0;
@@ -56,8 +56,8 @@
 		navItems = [].slice.call(nav.querySelectorAll('.link--page')),
 		// check if menu is open
 		isMenuOpen = false;
-		var burgerAugusto = document.getElementById('burger-augusto'),
-				burgerNoemi = document.getElementById('burger-noemi');
+		var burgerKate = document.getElementById('burger-kate'),
+				burgerJohn = document.getElementById('burger-john');
 
 
 	function init() {
@@ -151,7 +151,7 @@
 
 	// opens the menu
 	function openMenu() {
-		//hide the burgers augusto y noemi
+		//hide the burgers kate y john
 		hideBurgerMenus();
 
 		// toggle the menu button
@@ -165,7 +165,7 @@
 		var stackPagesIdxs = getStackPagesIdxs();
 		for(var i = 0; i < stackPagesIdxs.length; i++) {
 			var page = pages[stackPagesIdxs[i]];
-			if(page.id === 'page-augusto'&& current===1){
+			if(page.id === 'page-kate'&& current===1){
 				page.style.WebkitTransform = 'translate3d(0, 35%, -200px)';
 				page.style.transform = 'translate3d(0, 35%, -200px)';
 			}else{
@@ -183,40 +183,40 @@
 
 	function checkInitialBurger(){
 		if(current === 1){
-			burgerAugusto.style.opacity = 1;
-			burgerAugusto.style.visibility = 'visible';
-			burgerNoemi.style.opacity = 0;
-			burgerNoemi.style.visibility = 'hidden';
+			burgerKate.style.opacity = 1;
+			burgerKate.style.visibility = 'visible';
+			burgerJohn.style.opacity = 0;
+			burgerJohn.style.visibility = 'hidden';
 		}else if (current === 2){
-			burgerNoemi.style.opacity = 1;
-			burgerNoemi.style.visibility = 'visible';
-			burgerAugusto.style.opacity = 0;
-			burgerAugusto.style.visibility = 'hidden';
+			burgerJohn.style.opacity = 1;
+			burgerJohn.style.visibility = 'visible';
+			burgerKate.style.opacity = 0;
+			burgerKate.style.visibility = 'hidden';
 		}else{
 			hideBurgerMenus();
 		}
 	}
 	function setBurgerMenu(page){
 		switch(page){
-			case 'page-augusto':
-			 	burgerAugusto.style.opacity = 1;
-			 	burgerAugusto.style.visibility = 'visible';
-				burgerNoemi.style.opacity = 0;
-				burgerNoemi.style.visibility = 'hidden';
+			case 'page-kate':
+			 	burgerKate.style.opacity = 1;
+			 	burgerKate.style.visibility = 'visible';
+				burgerJohn.style.opacity = 0;
+				burgerJohn.style.visibility = 'hidden';
 
 				break;
-			case 'page-noemi':
-				burgerNoemi.style.opacity = 1;
-				burgerNoemi.style.visibility = 'visible';
-				burgerAugusto.style.opacity = 0;
-				burgerAugusto.style.visibility = 'hidden';
+			case 'page-john':
+				burgerJohn.style.opacity = 1;
+				burgerJohn.style.visibility = 'visible';
+				burgerKate.style.opacity = 0;
+				burgerKate.style.visibility = 'hidden';
 				break;
 		}
 	}
 
 	function hideBurgerMenus(){
-			burgerAugusto.style.opacity = 0;
-			burgerNoemi.style.opacity = 0;
+			burgerKate.style.opacity = 0;
+			burgerJohn.style.opacity = 0;
 
 	}
 

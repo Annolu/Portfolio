@@ -97,7 +97,6 @@ a {
   width: 115px; }
   .draw::before, .draw::after {
     border: 1px solid transparent;
-    transition: all 500ms ease-in;
     width: 0;
     height: 0; }
   .draw::before {
@@ -261,11 +260,10 @@ header {
   .projects.projects-right .info-wrapper {
     text-align: end; }
   .projects .project-thumbnail {
-    height: 100px;
     width: 40%;
     background: url("../images/browser.svg");
     background-size: cover;
-    height: 200px;
+    height: 237px;
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); }
@@ -540,7 +538,7 @@ header {
   margin-right: 15px; }
 
 .g-love {
-  background-image: url(../images/g-love.svg);
+  background-image: url("../images/g-love.svg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 80px;
@@ -600,7 +598,7 @@ header {
   width: 70px;
   float: right; }
 
-#augusto-chart {
+#kate-chart {
   max-height: 450px;
   max-width: 450px; }
 

@@ -82,7 +82,6 @@ a{
   background-size: contain;
 }
 
-
 .draw::before,
 .draw::after {
 	box-sizing: inherit;
@@ -93,49 +92,43 @@ a{
 }
 
 .draw {
-    transition: color 0.25s;
-    position: fixed;
-    z-index: 10;
-    bottom: 10px;
-    left: 8px;
-    padding: 0;
-    cursor: pointer;
-    outline: none;
-    height: 30px;
-    width: 115px;
-
+  transition: color 0.25s;
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  left: 8px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+  width: 115px;
   &::before,
   &::after {
     // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
     border: 1px solid transparent;
-    transition: all 500ms ease-in;
+    // transition: all 500ms ease-in;
     width: 0;
     height: 0;
   }
-
   // This covers the top & right borders (expands right, then down)
   &::before {
     top: 0;
     left: 0;
   }
-
   // And this the bottom & left borders (expands left, then up)
   &::after {
     bottom: 0;
     right: 0;
   }
-
   &:hover {
     color: white;
   }
-
   // Hover styles
   &:hover::before,
   &:hover::after {
     width: 100%;
     height: 100%;
   }
-
   &:hover::before {
     border-top-color: #8F86DD; // Make borders visible
     border-right-color: #8F86DD;
@@ -143,7 +136,6 @@ a{
       width 0.15s ease-out, // Width expands first
       height 0.15s ease-out 0.15s; // And then height
   }
-
   &:hover::after {
     border-bottom-color: #8F86DD; // Make borders visible
     border-left-color: #8F86DD;
@@ -317,11 +309,10 @@ header{
     }
   }
   .project-thumbnail{
-    height: 100px;
     width: 40%;
     background: url('../images/browser.svg');
     background-size: cover;
-    height: 200px;
+    height: 237px;
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
@@ -668,7 +659,7 @@ header{
   margin-right: 15px;
 }
 .g-love{
-  background-image: url(../images/g-love.svg);
+  background-image: url('../images/g-love.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 80px;
@@ -728,7 +719,7 @@ header{
   width:70px;
   float: right;
 }
-#augusto-chart{
+#kate-chart{
   max-height: 450px;
   max-width: 450px;
 }
@@ -749,6 +740,7 @@ header{
     color:$font-pink;
   }
 }
+
 
 .modal {
   position: fixed;

@@ -14,10 +14,10 @@ $(document).ready(function() {
 
   function toggleOverlayer(target) {
 
-    if(target.filter('.augusto', '.menu-item')){
-      $('.menu-overlayer.augusto').toggleClass('open');
-    }else if(target.filter('.noemi', '.menu-item')){
-      $('.menu-overlayer.noemi').toggleClass('open');
+    if(target.filter('.kate', '.menu-item')){
+      $('.menu-overlayer.kate').toggleClass('open');
+    }else if(target.filter('.john', '.menu-item')){
+      $('.menu-overlayer.john').toggleClass('open');
     }
   }
 
@@ -25,9 +25,9 @@ $(document).ready(function() {
     $('body').toggleClass('no-scroll')
   }
 
-  var ctxA = document.getElementById("augusto-chart");
+  var ctxA = document.getElementById("kate-chart");
 
-  var ctxN = document.getElementById("noemi-chart");
+  var ctxN = document.getElementById("john-chart");
 
   var projectsSection=$('.projects-wrapper');
   var projectsSectionHeight = projectsSection.height();
@@ -42,13 +42,12 @@ $(document).ready(function() {
   function resizeWorkSection(){
 
     if($( window ).width()<580){
-      initHeight= "1200px";
+      initHeight= "1300px";
     }else{
-      initHeight= "1050px";
+      initHeight= "1200px";
     }
     projectsSection.css('height', initHeight);
   }
-
 
   var buttonViewMore= $(".buttons");
 
@@ -67,19 +66,24 @@ $(document).ready(function() {
     //hide loader in work-button
     $('.work-loader-wrapper').css('transform','rotateX(90deg)');
 
-    if (target.hasClass('augusto')){
-      var projectsSectionAugs= $('.projects-wrapper.augusto');
+    if (target.hasClass('kate')){
+      var projectsSectionAugs= $('.projects-wrapper.kate');
       extendSection(projectsSectionAugs, target)
     }else{
-      var projectsSectionNoe= $('.projects-wrapper.noemi');
-      extendSection(projectsSectionNoe, target)
+      var projectsSectionJohn= $('.projects-wrapper.john');
+      extendSection(projectsSectionJohn, target)
     }
   }
 
   function extendSection(sectionToOpen, target){
     //if the button is clicked for the first time and there are more than 8 projects (equal to 2100px), show 4 more projects
     if(sectionToOpen.css('height') == initHeight && projectsSectionHeight > 2100){
-      sectionToOpen.css('height', "2100px")
+
+      if(initHeight=='1300px'){
+        sectionToOpen.css('height', "2600px");
+      }else{
+        sectionToOpen.css('height', "2100px");
+      }
     }else{
     //if the button is clicked again and there are no more projects to show, the button disappears
       sectionToOpen.css('height', projectsSectionHeight+"px")
@@ -88,7 +92,7 @@ $(document).ready(function() {
   }
 
   function hideWorkButton(target) {
-    if (target.hasClass('augusto')){
+    if (target.hasClass('kate')){
       target.css({'display':'none', 'opacity': '0'});
     }else{
       target.css({'display':'none', 'opacity': '0'});
@@ -99,7 +103,7 @@ $(document).ready(function() {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "SKILLZ",
+        label: "SKILLS",
         backgroundColor: [
           'rgba(254, 230, 76, 0.8)'
         ],
@@ -134,7 +138,7 @@ $(document).ready(function() {
     }
   });
 
-  var chartNoemi = new Chart(ctxN, {
+  var chartJohn = new Chart(ctxN, {
     type: 'radar',
     data: data,
     options: {
@@ -166,11 +170,11 @@ $(document).ready(function() {
     if(target.length) {
       event.preventDefault();
 
-      $('#page-augusto').stop().animate({
+      $('#page-kate').stop().animate({
         scrollTop: target[0].offsetTop
       }, 900);
 
-      $('#page-noemi').stop().animate({
+      $('#page-john').stop().animate({
         scrollTop: target[0].offsetTop
       }, 900);
     }
