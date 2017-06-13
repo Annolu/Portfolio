@@ -204,8 +204,10 @@ $(document).ready(function() {
   })
 
   function fillModal(e){
-    var originalModalInfo= e.target.parentNode.parentNode.parentNode;
+    //get modal info depending on which button I clicked
+    var originalModalInfo= e.target.parentNode.parentNode.parentNode.parentNode;
     var modalInfo= $(originalModalInfo).clone();
+    console.log(e.target);
     $(".modal-content").empty();
     $(".modal-content").append(modalInfo);
   }
