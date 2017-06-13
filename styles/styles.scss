@@ -68,17 +68,17 @@ a{
 /* Menu button */
 
 .menu-button {
-	position: fixed;
-	z-index: 10;
-	bottom: 15px;
-	left: 15px;
-	padding: 0;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	height: 20px;
-  width:100px;
-  background: url('../images/logo-1.svg');
+  position: fixed;
+  z-index: 10;
+  bottom: 13px;
+  left: 20px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 46px;
+  width: 45px;
+  background: url(../images/more-button-of-three-dots.svg);
   background-size: contain;
 }
 
@@ -95,13 +95,13 @@ a{
   transition: color 0.25s;
   position: fixed;
   z-index: 10;
-  bottom: 10px;
-  left: 8px;
+  bottom: 25px;
+  left: 10px;
   padding: 0;
   cursor: pointer;
   outline: none;
-  height: 30px;
-  width: 115px;
+  height: 22px;
+  width: 67px;
   &::before,
   &::after {
     // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
@@ -120,9 +120,9 @@ a{
     bottom: 0;
     right: 0;
   }
-  &:hover {
-    color: white;
-  }
+  // &:hover {
+  //   border-color: red;
+  // }
   // Hover styles
   &:hover::before,
   &:hover::after {
@@ -722,10 +722,10 @@ header{
   width:70px;
   float: right;
 }
-#kate-chart{
-  max-height: 450px;
-  max-width: 450px;
-}
+// #kate-chart{
+//   max-height: 450px;
+//   max-width: 450px;
+// }
 .footer-section{
   background-image: url('../images/footer-top.svg');
   background-size: contain;
@@ -783,6 +783,12 @@ header{
     &>div{
       width: 50%;
     }
+    .project-thumbnail{
+      height: 310px;
+    }
+    .project-info{
+      padding-top: 0;
+    }
   }
 
   .modal-wrapper {
@@ -827,11 +833,14 @@ header{
     height: 100%;
     padding-top: 5%;
     .big-logo{
-      background: url(../images/rebus-big-logo.svg) no-repeat;
-      width: 57%;
-      background-size: contain;
-      height: 175px;
-      margin:0 auto;
+      // background: url(../images/rebus-big-logo.svg) no-repeat;
+      // width: 57%;
+      /* background-size: contain; */
+      height: 150px;
+      margin: 0 auto;
+      font-size: 70px;
+      text-align: center;
+      color: white;
     }
     .page-rebus-quote{
       height:110px;

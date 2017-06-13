@@ -65,15 +65,15 @@ a {
 .menu-button {
   position: fixed;
   z-index: 10;
-  bottom: 15px;
-  left: 15px;
+  bottom: 13px;
+  left: 20px;
   padding: 0;
   cursor: pointer;
   border: none;
   outline: none;
-  height: 20px;
-  width: 100px;
-  background: url("../images/logo-1.svg");
+  height: 46px;
+  width: 45px;
+  background: url(../images/more-button-of-three-dots.svg);
   background-size: contain; }
 
 .draw::before,
@@ -88,13 +88,13 @@ a {
   transition: color 0.25s;
   position: fixed;
   z-index: 10;
-  bottom: 10px;
-  left: 8px;
+  bottom: 25px;
+  left: 10px;
   padding: 0;
   cursor: pointer;
   outline: none;
-  height: 30px;
-  width: 115px; }
+  height: 22px;
+  width: 67px; }
   .draw::before, .draw::after {
     border: 1px solid transparent;
     width: 0;
@@ -105,8 +105,6 @@ a {
   .draw::after {
     bottom: 0;
     right: 0; }
-  .draw:hover {
-    color: white; }
   .draw:hover::before, .draw:hover::after {
     width: 100%;
     height: 100%; }
@@ -600,10 +598,6 @@ header {
   width: 70px;
   float: right; }
 
-#kate-chart {
-  max-height: 450px;
-  max-width: 450px; }
-
 .footer-section {
   background-image: url("../images/footer-top.svg");
   background-size: contain;
@@ -651,6 +645,10 @@ header {
       text-align: left; }
   .modal .projects > div {
     width: 50%; }
+  .modal .projects .project-thumbnail {
+    height: 310px; }
+  .modal .projects .project-info {
+    padding-top: 0; }
   .modal .modal-wrapper {
     background-color: #fefefe;
     margin: 8% auto;
@@ -688,11 +686,12 @@ header {
     height: 100%;
     padding-top: 5%; }
     .page-rebus .page-rebus-frame .big-logo {
-      background: url(../images/rebus-big-logo.svg) no-repeat;
-      width: 57%;
-      background-size: contain;
-      height: 175px;
-      margin: 0 auto; }
+      /* background-size: contain; */
+      height: 150px;
+      margin: 0 auto;
+      font-size: 70px;
+      text-align: center;
+      color: white; }
     .page-rebus .page-rebus-frame .page-rebus-quote {
       height: 110px; }
       .page-rebus .page-rebus-frame .page-rebus-quote .quote {

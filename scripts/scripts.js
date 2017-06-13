@@ -103,7 +103,7 @@ $(document).ready(function() {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "SKILLS",
+        // label: "SKILLS",
         backgroundColor: [
           'rgba(254, 230, 76, 0.8)'
         ],
@@ -117,11 +117,14 @@ $(document).ready(function() {
   };
 
   var chartAugusto = new Chart(ctxA, {
-    type: 'radar',
+    type: 'line',
     data: data,
     options: {
       legend: {
-          position: "bottom"
+        display: false,
+          labels: {
+            display: false
+          }
       },
       scale: {
         ticks: {
@@ -207,9 +210,11 @@ $(document).ready(function() {
     //get modal info depending on which button I clicked
     var originalModalInfo= e.target.parentNode.parentNode.parentNode.parentNode;
     var modalInfo= $(originalModalInfo).clone();
+    var additionalInfo= "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>";
     console.log(e.target);
     $(".modal-content").empty();
     $(".modal-content").append(modalInfo);
+    $('.modal-content .info-wrapper').append(additionalInfo);
   }
 
   function hideLoader(){
