@@ -162,7 +162,7 @@ a {
   top: 20px;
   right: 20px;
   transition: all 200ms ease-in-out;
-  z-index: 13;
+  z-index: 10;
   background: url("../images/burguer-1.svg");
   background-size: contain;
   width: 50px;
@@ -223,11 +223,18 @@ a {
 
 header {
   background-color: #282071;
-  background-image: url("../images/header-bkg.svg");
+  background-image: url("../images/header-bkg-new-sky.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   min-height: 220px; }
+  header .header-bkg {
+    background-image: url("../images/header-bkg-new-mountain.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 220px;
+    position: relative; }
 
 .frontend-brand {
   color: #f56aa1;
@@ -390,8 +397,11 @@ header {
   .about-section .content {
     text-align: center; }
 
-.work-section .sections-title {
-  padding: 0; }
+.work-section {
+  background-color: white;
+  position: relative; }
+  .work-section .sections-title {
+    padding: 0; }
 
 .awards-section {
   padding-bottom: 50px;
@@ -516,6 +526,26 @@ header {
   width: 305px;
   margin: 5% auto; }
 
+.sputnik {
+  background-image: url("../images/sputnik.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: inherit;
+  height: 100px;
+  width: 300px;
+  top: 100px;
+  left: 70%;
+  position: absolute;
+  transform-origin: top left;
+  animation: spin 7s linear infinite; }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 .footer-section {
   background-image: url("../images/footer-top.svg");
   background-size: contain;
@@ -661,6 +691,8 @@ header {
 @media only screen and (min-width: 1300px) {
   header {
     min-height: 275px; }
+    header .header-bkg {
+      min-height: 275px; }
 
   .header-title-wrapper {
     padding: 50px 0; }
@@ -687,6 +719,8 @@ header {
 
   header {
     min-height: 0; }
+    header .header-bkg {
+      min-height: 0; }
 
   .page-rebus .page-rebus-frame .big-logo {
     height: 100px; }
