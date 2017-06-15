@@ -25,9 +25,9 @@ $(document).ready(function() {
     $('body').toggleClass('no-scroll')
   }
 
-  var ctxA = document.getElementById("kate-chart");
+  var ctxK = document.getElementById("kate-chart");
 
-  var ctxN = document.getElementById("john-chart");
+  var ctxJ = document.getElementById("john-chart");
 
   var projectsSection=$('.projects-wrapper');
   var projectsSectionHeight = projectsSection.height();
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
   function resizeWorkSection(){
 
-    if($( window ).width()<580){
+    if($( window ).width()<680){
       initHeight= "1300px";
     }else{
       initHeight= "1200px";
@@ -105,10 +105,10 @@ $(document).ready(function() {
       {
         // label: "SKILLS",
         backgroundColor: [
-          'rgba(254, 230, 76, 0.8)'
+          'rgba(159, 148, 247, .5)'
         ],
         borderColor: [
-          'rgba(254, 230, 76, 1)'
+          'rgba(159, 148, 247, .5)'
         ],
         borderWidth: 1,
         data: [6, 9, 7, 8, 7, 6, 7],
@@ -116,7 +116,7 @@ $(document).ready(function() {
     ]
   };
 
-  var chartAugusto = new Chart(ctxA, {
+  var chartKate = new Chart(ctxK, {
     type: 'line',
     data: data,
     options: {
@@ -135,18 +135,21 @@ $(document).ready(function() {
         },
         pointLabels: {
           fontSize: 14,
-          fontColor: '797878'
+          fontColor: '9f94f7'
         }
       }
     }
   });
 
-  var chartJohn = new Chart(ctxN, {
-    type: 'radar',
+  var chartJohn = new Chart(ctxJ, {
+    type: 'line',
     data: data,
     options: {
       legend: {
-          position: "bottom"
+        display: false,
+          labels: {
+            display: false
+          }
       },
       scale: {
         ticks: {
@@ -157,7 +160,7 @@ $(document).ready(function() {
         },
         pointLabels: {
           fontSize: 14,
-          fontColor: '797878'
+          fontColor: '9f94f7'
         }
       }
     }

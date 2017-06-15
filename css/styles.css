@@ -61,7 +61,6 @@ a {
   width: 70%;
   margin: 0 auto; }
 
-/* Menu button */
 .menu-button {
   position: fixed;
   z-index: 10;
@@ -97,6 +96,7 @@ a {
   width: 67px; }
   .draw::before, .draw::after {
     border: 1px solid transparent;
+    transition: all 200ms ease-in;
     width: 0;
     height: 0; }
   .draw::before {
@@ -263,6 +263,7 @@ header {
     width: 40%;
     background: url("../images/preview.jpg");
     background-size: cover;
+    background-position-x: center;
     height: 237px;
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
@@ -327,9 +328,6 @@ header {
 .work-buttons-section i {
   margin: 0 4px; }
 
-.centre-button {
-  text-align: center; }
-
 .work-loader-wrapper {
   height: 100%;
   width: 100%;
@@ -379,7 +377,7 @@ header {
     display: table; }
 
 .about-section {
-  padding-bottom: 50px;
+  padding-bottom: 5px;
   padding-top: 50px;
   background-image: url("../images/about-top.svg");
   background-size: contain;
@@ -405,12 +403,13 @@ header {
   background-color: #FFFFFF; }
   .awards-section .skills-chart {
     display: inline-block;
-    height: 400px;
     width: 50%;
     float: left; }
   .awards-section .awards-wrapper {
     float: right;
     width: 45%; }
+    .awards-section .awards-wrapper h2 {
+      margin-top: 0; }
   .awards-section p {
     text-align: left;
     margin: 35px 0; }
@@ -476,31 +475,28 @@ header {
     display: block;
     transition: all 400ms ease;
     background-size: contain; }
+    .contact-section .social-media .social-icons:hover {
+      transform: scale(1.2); }
   .contact-section .social-media .twitter {
     background-image: url("../social-icons/twitter-grey.svg"); }
     .contact-section .social-media .twitter:hover {
-      background-image: url("../social-icons/twitter.svg");
-      transform: scale(1.2); }
+      background-image: url("../social-icons/twitter.svg"); }
   .contact-section .social-media .github {
     background-image: url("../social-icons/github-grey.svg"); }
     .contact-section .social-media .github:hover {
-      background-image: url("../social-icons/github.svg");
-      transform: scale(1.2); }
+      background-image: url("../social-icons/github.svg"); }
   .contact-section .social-media .linkedin {
     background-image: url("../social-icons/linkedin-grey.svg"); }
     .contact-section .social-media .linkedin:hover {
-      background-image: url("../social-icons/linkedin.svg");
-      transform: scale(1.2); }
+      background-image: url("../social-icons/linkedin.svg"); }
   .contact-section .social-media .soundcloud {
     background-image: url("../social-icons/soundcloud-grey.svg"); }
     .contact-section .social-media .soundcloud:hover {
-      background-image: url("../social-icons/soundcloud.svg");
-      transform: scale(1.2); }
+      background-image: url("../social-icons/soundcloud.svg"); }
   .contact-section .social-media .email {
     background-image: url("../social-icons/email-grey.svg"); }
     .contact-section .social-media .email:hover {
-      background-image: url("../social-icons/email.svg");
-      transform: scale(1.2); }
+      background-image: url("../social-icons/email.svg"); }
 
 .planets-rebus {
   top: 30px;
@@ -519,84 +515,6 @@ header {
   height: 100px;
   width: 305px;
   margin: 5% auto; }
-
-.abeja {
-  background-image: url("../images/abeja.svg");
-  background-repeat: no-repeat;
-  height: 66px;
-  width: 55px;
-  display: inline-block;
-  margin-left: 15px; }
-
-.trophy {
-  background-image: url("../images/trophy.svg");
-  background-repeat: no-repeat;
-  height: 64px;
-  width: 64px;
-  display: inline-block;
-  float: left;
-  margin-right: 15px; }
-
-.g-love {
-  background-image: url("../images/g-love.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 80px;
-  width: 80px;
-  display: inline-block;
-  margin-left: 15px; }
-
-.face-rebus {
-  background-image: url("../images/face.svg");
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 90px;
-  display: inline-block;
-  float: right;
-  margin-top: -80px;
-  margin-bottom: 80px; }
-
-.bat-rebus {
-  background-image: url("../images/bat-rebus.svg");
-  background-repeat: no-repeat;
-  height: 58px;
-  width: 80px;
-  display: inline-block;
-  float: right;
-  margin-top: -30px;
-  margin-bottom: 30px; }
-
-.card-rebus {
-  background-image: url("../images/card-rebus.svg");
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 79px;
-  display: inline-block;
-  float: right;
-  margin-top: -70px; }
-
-.green-rebus {
-  background-image: url("../images/green-rebus.svg");
-  background-repeat: no-repeat;
-  height: 40px;
-  width: 120px;
-  display: inline-block;
-  margin-top: 25px; }
-
-.gallina {
-  background-image: url("../images/gallina.svg");
-  background-repeat: no-repeat;
-  height: 110px;
-  width: 120px;
-  display: inline-block;
-  margin-top: -50px; }
-
-.flight-rebus {
-  background-image: url("../images/flight-rebus.svg");
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 70px;
-  float: right; }
 
 .footer-section {
   background-image: url("../images/footer-top.svg");
@@ -651,7 +569,7 @@ header {
     padding-top: 0; }
   .modal .modal-wrapper {
     background-color: #fefefe;
-    margin: 8% auto;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #888;
     width: 75%;
@@ -686,7 +604,6 @@ header {
     height: 100%;
     padding-top: 5%; }
     .page-rebus .page-rebus-frame .big-logo {
-      /* background-size: contain; */
       height: 150px;
       margin: 0 auto;
       font-size: 70px;
@@ -750,7 +667,18 @@ header {
 
   .planets-rebus {
     top: 50px; } }
+@media only screen and (max-width: 1100px) {
+  .central-panel {
+    width: 80%; } }
 @media only screen and (max-width: 880px) {
+  .modal .projects > div {
+    width: 100%; }
+  .modal h3 {
+    margin-top: 15px !important; }
+  .modal .modal-wrapper {
+    align-self: auto;
+    margin: 4% auto; }
+
   .header-title-wrapper {
     width: 100%; }
 
@@ -780,6 +708,24 @@ header {
 @media only screen and (max-height: 680px) and (min-width: 900px) {
   .page-rebus .planets-shadow {
     display: none; } }
+@media only screen and (max-width: 680px) {
+  .awards-section {
+    padding-top: 75px; }
+    .awards-section .sections {
+      width: 100%;
+      float: none;
+      text-align: center;
+      padding-top: 30px; }
+
+  .projects .project-thumbnail {
+    width: 100%; }
+  .projects .project-info {
+    width: 100%;
+    padding: 0; }
+    .projects .project-info h3 {
+      margin-top: 15px; }
+    .projects .project-info .info-wrapper {
+      text-align: left; } }
 @media only screen and (max-width: 580px) {
   .page-rebus .page-rebus-frame .page-rebus-quote .quote {
     font-size: 1.2rem; }
@@ -791,6 +737,12 @@ header {
   h1 {
     font-size: 35px; }
 
+  .about-section .content {
+    text-align: left; }
+
+  .modal .modal-wrapper {
+    width: 90%; }
+
   .experience-section {
     padding-top: 40px; }
     .experience-section .awards > div {
@@ -801,37 +753,14 @@ header {
     .experience-section .awards {
       padding-top: 35px; }
 
-  .g-love {
-    position: absolute; }
-
-  .awards-section {
-    padding-top: 75px; }
-    .awards-section .sections {
-      width: 100%;
-      float: none; }
-    .awards-section p {
-      text-align: center; }
-    .awards-section .awards-wrapper {
-      text-align: center; }
-
   .frontend-brand {
     font-size: 15px; }
-
-  .projects .project-thumbnail {
-    width: 100%; }
-  .projects .project-info {
-    width: 100%;
-    padding: 0; }
-    .projects .project-info h3 {
-      margin-top: 15px; }
-    .projects .project-info .info-wrapper {
-      text-align: left; }
 
   .contact-section {
     padding-top: 70px;
     padding-bottom: 40px; }
     .contact-section .social-media li {
-      padding: 0px 3px; }
+      padding: 18px 3px 0 3px; }
     .contact-section .social-media .social-icons {
       width: 45px;
       height: 45px; }
@@ -856,9 +785,6 @@ header {
     width: 220px; }
 
   .sections-title .content {
-    margin: 15px 0 0 0; }
-
-  .modal .projects > div {
-    width: 100%; } }
+    margin: 15px 0 0 0; } }
 
 /*# sourceMappingURL=styles.css.map */

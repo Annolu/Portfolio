@@ -65,8 +65,6 @@ a{
   margin: 0 auto;
 }
 
-/* Menu button */
-
 .menu-button {
   position: fixed;
   z-index: 10;
@@ -104,45 +102,39 @@ a{
   width: 67px;
   &::before,
   &::after {
-    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
     border: 1px solid transparent;
-    // transition: all 500ms ease-in;
+    transition: all 200ms ease-in;
     width: 0;
     height: 0;
   }
-  // This covers the top & right borders (expands right, then down)
   &::before {
     top: 0;
     left: 0;
   }
-  // And this the bottom & left borders (expands left, then up)
   &::after {
     bottom: 0;
     right: 0;
   }
-  // &:hover {
-  //   border-color: red;
-  // }
-  // Hover styles
+
   &:hover::before,
   &:hover::after {
     width: 100%;
     height: 100%;
   }
   &:hover::before {
-    border-top-color: #8F86DD; // Make borders visible
-    border-right-color: #8F86DD;
+    border-top-color: $light-border;
+    border-right-color: $light-border;
     transition:
-      width 0.15s ease-out, // Width expands first
-      height 0.15s ease-out 0.15s; // And then height
+      width 0.15s ease-out,
+      height 0.15s ease-out 0.15s;
   }
   &:hover::after {
-    border-bottom-color: #8F86DD; // Make borders visible
-    border-left-color: #8F86DD;
+    border-bottom-color: $light-border;
+    border-left-color: $light-border;
     transition:
-      border-color 0s ease-out 0.3s, // Wait for ::before to finish before showing border
-      width 0.15s ease-out 0.3s, // And then exanding width
-      height 0.15s ease-out 0.5s; // And finally height
+      border-color 0s ease-out 0.3s,
+      width 0.15s ease-out 0.3s,
+      height 0.15s ease-out 0.5s;
   }
 }
 
@@ -315,6 +307,7 @@ header{
     width: 40%;
     background: url('../images/preview.jpg');
     background-size: cover;
+    background-position-x: center;
     height: 237px;
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
@@ -401,10 +394,6 @@ header{
   }
 }
 
-.centre-button{
-  text-align: center;
-}
-
 .work-loader-wrapper{
   height: 100%;
   width: 100%;
@@ -467,7 +456,7 @@ header{
 }
 
 .about-section{
-  padding-bottom: 50px;
+  padding-bottom: 5px;
   padding-top: 50px;
   background-image: url('../images/about-top.svg');
   background-size: contain;
@@ -497,13 +486,15 @@ header{
   background-color: #FFFFFF;
   .skills-chart{
     display: inline-block;
-    height: 400px;
     width: 50%;
     float: left;
   }
   .awards-wrapper{
     float: right;
     width: 45%;
+    h2{
+      margin-top: 0;
+    }
   }
   p{
     text-align: left;
@@ -588,40 +579,38 @@ header{
       display: block;
       transition: all 400ms ease;
       background-size: contain;
+      &:hover{
+        transform: scale(1.2);
+      }
     }
     .twitter{
       background-image: url('../social-icons/twitter-grey.svg');
       &:hover{
         background-image: url('../social-icons/twitter.svg');
-        transform: scale(1.2);
       }
     }
     .github{
       background-image: url('../social-icons/github-grey.svg');
       &:hover{
         background-image: url('../social-icons/github.svg');
-        transform: scale(1.2);
       }
     }
     .linkedin{
       background-image: url('../social-icons/linkedin-grey.svg');
       &:hover{
         background-image: url('../social-icons/linkedin.svg');
-        transform: scale(1.2);
       }
     }
     .soundcloud{
       background-image: url('../social-icons/soundcloud-grey.svg');
       &:hover{
         background-image: url('../social-icons/soundcloud.svg');
-        transform: scale(1.2);
       }
     }
     .email{
       background-image: url('../social-icons/email-grey.svg');
       &:hover{
         background-image: url('../social-icons/email.svg');
-        transform: scale(1.2);
       }
     }
   }
@@ -644,88 +633,7 @@ header{
   width:305px;
   margin: 5% auto;
 }
-.abeja{
-  background-image: url('../images/abeja.svg');
-  background-repeat: no-repeat;
-  height:66px;
-  width:55px;
-  display: inline-block;
-  margin-left: 15px;
-}
-.trophy{
-  background-image: url('../images/trophy.svg');
-  background-repeat: no-repeat;
-  height:64px;
-  width:64px;
-  display: inline-block;
-  float: left;
-  margin-right: 15px;
-}
-.g-love{
-  background-image: url('../images/g-love.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 80px;
-  width: 80px;
-  display: inline-block;
-  margin-left: 15px;
-}
-.face-rebus{
-  background-image: url('../images/face.svg');
-  background-repeat: no-repeat;
-  height:30px;
-  width:90px;
-  display: inline-block;
-  float: right;
-  margin-top: -80px;
-  margin-bottom: 80px;
-}
-.bat-rebus{
-  background-image: url('../images/bat-rebus.svg');
-  background-repeat: no-repeat;
-  height:58px;
-  width:80px;
-  display: inline-block;
-  float: right;
-  margin-top:-30px;
-  margin-bottom: 30px;
-}
-.card-rebus{
-  background-image: url('../images/card-rebus.svg');
-  background-repeat: no-repeat;
-  height:48px;
-  width:79px;
-  display: inline-block;
-  float: right;
-  margin-top: -70px;
-}
-.green-rebus{
-  background-image: url('../images/green-rebus.svg');
-  background-repeat: no-repeat;
-  height:40px;
-  width:120px;
-  display: inline-block;
-  margin-top: 25px;
-}
-.gallina{
-  background-image: url('../images/gallina.svg');
-  background-repeat: no-repeat;
-  height:110px;
-  width:120px;
-  display: inline-block;
-  margin-top: -50px;
-}
-.flight-rebus{
-  background-image: url('../images/flight-rebus.svg');
-  background-repeat: no-repeat;
-  height:70px;
-  width:70px;
-  float: right;
-}
-// #kate-chart{
-//   max-height: 450px;
-//   max-width: 450px;
-// }
+
 .footer-section{
   background-image: url('../images/footer-top.svg');
   background-size: contain;
@@ -752,7 +660,7 @@ header{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: $transparent-black;
   transition: all 400ms ease;
   opacity: 0;
   visibility: hidden;
@@ -793,7 +701,7 @@ header{
 
   .modal-wrapper {
     background-color: #fefefe;
-    margin: 8% auto;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #888;
     width: 75%;
@@ -829,13 +737,10 @@ header{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#281556', endColorstr='#433b8b', GradientType=1 );
 
   .page-rebus-frame{
-    border:1px solid #8F86DD;
+    border:1px solid $light-border;
     height: 100%;
     padding-top: 5%;
     .big-logo{
-      // background: url(../images/rebus-big-logo.svg) no-repeat;
-      // width: 57%;
-      /* background-size: contain; */
       height: 150px;
       margin: 0 auto;
       font-size: 70px;
@@ -883,7 +788,7 @@ header{
       width: 250px;
       margin: 25px auto 0 auto;
       padding-top: 25px;
-      border-top: 1px solid #8F86DD;
+      border-top: 1px solid $light-border;
     }
   }
   .page-rebus-footer{
@@ -912,14 +817,26 @@ header{
 
 }
 @media only screen and (max-width: 1100px) {
-  .page-rebus {
-    .page-rebus-frame{
-      .big-logo{
-      }
-    }
+  .central-panel{
+    width: 80%;
   }
 }
 @media only screen and (max-width: 880px) {
+  .modal{
+    .projects{
+      &>div {
+        width: 100%;
+      }
+    }
+    h3 {
+      margin-top: 15px !important;
+    }
+    .modal-wrapper{
+      align-self: auto;
+      margin: 4% auto;
+    }
+  }
+
   .header-title-wrapper{
     width: 100%;
   }
@@ -969,6 +886,35 @@ header{
   }
 }
 
+@media only screen and (max-width: 680px) {
+
+  .awards-section{
+    padding-top: 75px;
+    .sections{
+      width: 100%;
+      float: none;
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+
+  .projects{
+    .project-thumbnail {
+      width: 100%;
+    }
+    .project-info{
+      width: 100%;
+      padding: 0;
+      h3{
+        margin-top: 15px;
+      }
+      .info-wrapper{
+        text-align: left;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 580px) {
 
   .page-rebus {
@@ -982,12 +928,23 @@ header{
         width: 85%;
         background-size: contain;
         height: 65px;
-
       }
     }
   }
   h1{
     font-size: 35px;
+  }
+
+  .about-section{
+    .content{
+      text-align: left;
+    }
+  }
+
+  .modal{
+    .modal-wrapper{
+      width: 90%;
+    }
   }
 
   .experience-section{
@@ -1007,39 +964,9 @@ header{
       padding-top: 35px;
     }
   }
-  .g-love{
-    position: absolute;
-  }
-  .awards-section{
-    padding-top: 75px;
-    .sections{
-      width: 100%;
-      float: none;
-    }
-    p{
-      text-align: center;
-    }
-    .awards-wrapper {
-      text-align: center;
-    }
-  }
+
   .frontend-brand{
     font-size: 15px;
-  }
-  .projects{
-    .project-thumbnail {
-      width: 100%;
-    }
-    .project-info{
-      width: 100%;
-      padding: 0;
-      h3{
-        margin-top: 15px;
-      }
-      .info-wrapper{
-        text-align: left;
-      }
-    }
   }
 
   .contact-section{
@@ -1047,7 +974,7 @@ header{
     padding-bottom: 40px;
     .social-media{
       li{
-        padding: 0px 3px;
+        padding: 18px 3px 0 3px;
       }
       .social-icons{
         width: 45px;
@@ -1079,13 +1006,6 @@ header{
   .sections-title{
     .content{
       margin: 15px 0 0 0;
-    }
-  }
-  .modal{
-    .projects{
-      &>div{
-        width: 100%;
-      }
     }
   }
 }
