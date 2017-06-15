@@ -527,17 +527,17 @@ header {
   margin: 5% auto; }
 
 .sputnik {
-  background-image: url("../images/sputnik.svg");
+  background-image: url(../images/sputnik.svg);
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: inherit;
   height: 100px;
   width: 300px;
   top: 100px;
-  left: 70%;
+  left: 73%;
   position: absolute;
   transform-origin: top left;
-  animation: spin 7s linear infinite; }
+  animation: spin 7s linear infinite reverse; }
 
 @-webkit-keyframes spin {
   100% {
