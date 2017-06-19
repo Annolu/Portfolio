@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  setInterval(hideLoader, 200);
+  setTimeout(hideLoader, 200);
 
   var burger= $('.burger-container');
   var event;
@@ -12,6 +12,7 @@ $(document).ready(function() {
     bodyNoScroll();
   }
 
+  //open right page when click on outer menu
   function toggleOverlayer(target) {
 
     if(target.filter('.kate', '.menu-item')){
@@ -24,10 +25,6 @@ $(document).ready(function() {
   function bodyNoScroll() {
     $('body').toggleClass('no-scroll')
   }
-
-  var ctxK = document.getElementById("kate-chart");
-
-  var ctxJ = document.getElementById("john-chart");
 
   var projectsSection=$('.projects-wrapper');
   var projectsSectionHeight = projectsSection.height();
@@ -103,18 +100,19 @@ $(document).ready(function() {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        // label: "SKILLS",
-        backgroundColor: [
+        backgroundColor:
           'rgba(159, 148, 247, .5)'
-        ],
-        borderColor: [
+        ,
+        borderColor:
           'rgba(159, 148, 247, .5)'
-        ],
+        ,
         borderWidth: 1,
         data: [6, 9, 7, 8, 7, 6, 7],
       }
     ]
   };
+
+  var ctxK = document.getElementById("kate-chart");
 
   var chartKate = new Chart(ctxK, {
     type: 'line',
@@ -140,6 +138,8 @@ $(document).ready(function() {
       }
     }
   });
+
+  var ctxJ = document.getElementById("john-chart");
 
   var chartJohn = new Chart(ctxJ, {
     type: 'line',
@@ -214,7 +214,6 @@ $(document).ready(function() {
     var originalModalInfo= e.target.parentNode.parentNode.parentNode.parentNode;
     var modalInfo= $(originalModalInfo).clone();
     var additionalInfo= "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa.</p>";
-    console.log(e.target);
     $(".modal-content").empty();
     $(".modal-content").append(modalInfo);
     $('.modal-content .info-wrapper').append(additionalInfo);

@@ -162,7 +162,7 @@ a {
   top: 20px;
   right: 20px;
   transition: all 200ms ease-in-out;
-  z-index: 10;
+  z-index: 11;
   background: url("../images/burguer-1.svg");
   background-size: contain;
   width: 50px;
@@ -189,19 +189,28 @@ a {
     margin: 0;
     padding: 0; }
   .menu-overlayer li {
-    transform: rotateX(90deg); }
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg); }
     .menu-overlayer li.item-1 {
       transition: all 200ms linear;
-      transition-delay: 100ms; }
+      transition-delay: 100ms;
+      -webkit-transition: all 200ms linear;
+      -webkit-transition-delay: 100ms; }
     .menu-overlayer li.item-2 {
       transition: all 200ms linear;
-      transition-delay: 200ms; }
+      transition-delay: 200ms;
+      -webkit-transition: all 200ms linear;
+      -webkit-transition-delay: 200ms; }
     .menu-overlayer li.item-3 {
       transition: all 200ms linear;
-      transition-delay: 300ms; }
+      transition-delay: 300ms;
+      -webkit-transition: all 200ms linear;
+      -webkit-transition-delay: 300ms; }
     .menu-overlayer li.item-4 {
       transition: all 200ms linear;
-      transition-delay: 400ms; }
+      transition-delay: 400ms;
+      -webkit-transition: all 200ms linear;
+      -webkit-transition-delay: 400ms; }
   .menu-overlayer .menu-item {
     display: block;
     background-color: #282071;
@@ -327,10 +336,10 @@ header {
   .work-buttons-section .icons-buttons:hover {
     background-color: #f56aa1;
     color: white; }
-.work-buttons-section .github-icon {
+.work-buttons-section .live-icon {
   color: #1d1e21;
   border-color: #1d1e21; }
-  .work-buttons-section .github-icon:hover {
+  .work-buttons-section .live-icon:hover {
     background-color: #1d1e21; }
 .work-buttons-section i {
   margin: 0 4px; }
