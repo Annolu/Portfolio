@@ -697,6 +697,9 @@ header {
     position: absolute;
     right: 0; }
 
+/*//////////
+MEDIAQUERIES
+//////////*/
 @media only screen and (min-width: 1300px) {
   header {
     min-height: 275px; }
@@ -707,7 +710,38 @@ header {
     padding: 50px 0; }
 
   .planets-rebus {
-    top: 50px; } }
+    top: 50px; }
+
+  .about-section {
+    padding-top: 150px; } }
+@media only screen and (min-width: 1650px) {
+  header {
+    min-height: 420px; }
+    header .header-bkg {
+      min-height: 420px; }
+
+  .about-section {
+    padding-top: 200px; }
+
+  .awards-section {
+    padding-top: 300px; }
+
+  .awards-section .skills-chart {
+    width: 40%; }
+
+  .experience-section {
+    padding-top: 150px; }
+
+  .contact-section {
+    padding-top: 200px; }
+
+  .footer-section {
+    padding-top: 150px;
+    height: 260px; }
+
+  .projects .project-thumbnail {
+    width: 30%;
+    height: 350px; } }
 @media only screen and (max-width: 1100px) {
   .central-panel {
     width: 80%; } }
